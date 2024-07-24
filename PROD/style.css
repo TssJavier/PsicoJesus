@@ -1,0 +1,146 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo amarillo claro */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #FFFACD; /* Color de fondo amarillo claro */
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button.active {
+    background-color: rgb(134, 21, 91); /* Color cuando está clicado */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Estilo para el contenedor de las tarifas */
+.tarifas-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las cajas de tarifas */
+}
+
+/* Estilo para cada tarifa */
+.tarifa {
+    border: 3px solid #313323;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #f5f5f5;
+    flex: 1 1 20%; /* Ancho flexible, ajusta el 20% según el espacio disponible */
+    max-width: 230px; /* Ancho máximo para evitar que las cajas sean demasiado anchas */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin: 0 auto; /* Centra las cajas dentro de su contenedor */
+}
+
+/* Estilo para el nombre y detalles de la tarifa */
+.tarifa h4 {
+    margin-top: 0;
+}
+
+/* Estilo para el mensaje de descuento */
+.descuento {
+    color: red;
+    font-weight: bold;
+}
