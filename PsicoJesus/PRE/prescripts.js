@@ -12,12 +12,12 @@ presencialTarifas.style.display = 'none';
 formulario.style.display = 'none';
 
 // Añadir event listeners a los botones
-onlineBtn.addEventListener('click', function() {
+onlineBtn.addEventListener('click', function () {
     console.log('Botón Online clicado');
     toggleTarifas('online');
 });
 
-presencialBtn.addEventListener('click', function() {
+presencialBtn.addEventListener('click', function () {
     console.log('Botón Presencial clicado');
     toggleTarifas('presencial');
 });
@@ -31,9 +31,11 @@ function toggleTarifas(tipo) {
             presencialTarifas.style.display = 'none';
             onlineBtn.classList.add('active');
             presencialBtn.classList.remove('active');
+            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
         } else {
             onlineTarifas.style.display = 'none';
             onlineBtn.classList.remove('active');
+            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     } else if (tipo === 'presencial') {
         if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
@@ -41,9 +43,11 @@ function toggleTarifas(tipo) {
             onlineTarifas.style.display = 'none';
             presencialBtn.classList.add('active');
             onlineBtn.classList.remove('active');
+            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
         } else {
             presencialTarifas.style.display = 'none';
             presencialBtn.classList.remove('active');
+            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     }
 }
@@ -54,7 +58,7 @@ function mostrarFormulario(tipo, tarifa) {
 }
 
 // Configuración del manejador de eventos del formulario
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
