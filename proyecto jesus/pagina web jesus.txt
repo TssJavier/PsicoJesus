@@ -1,8 +1,0 @@
-QUIERO hacer una pagina web para un amigo. La pagina la quiero hacer con HTML CSS y Javascript Su pagina web es de psicología y necesito que la pagina tenga:
-- una home con un pequeño apartado explicando su metodologia
-- y debajo dos botones que ponga: en el primero: ONLINE, en el segundo: PRESENCIAL
-- clickando uno de los dos botones te tiene que llevar a otra seccion de la pagina web que te indique las 3 tarifas principales de sesion online o de la sesion presencial segun que boton pulsen
-- Cuando clicke a que tarifa quiere todas tendran que llevarles a un formulario para rellenar su email y una breve descripcion de que necesita y fecha estimada de comienzo de sesiones
-- Esos emails tienen que enviarse al hotmail de mi amigo
-- en el footer estaran mis datos de contacto y localizacion de mi tienda presencial
-
