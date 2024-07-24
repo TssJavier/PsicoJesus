@@ -5,6 +5,14 @@ const onlineTarifas = document.getElementById('onlineTarifas');
 const presencialTarifas = document.getElementById('presencialTarifas');
 const formulario = document.getElementById('formulario');
 const form = document.getElementById('contactForm');
+const ReservaUno = document.getElementById('reservaUno');
+const ReservaDos = document.getElementById('reservaDos');
+const ReservaTres = document.getElementById('reservaTres');
+const ReservaCuatro = document.getElementById('reservaCuatro');
+const ReservaCinco = document.getElementById('reservaCinco');
+const ReservaSeis = document.getElementById('reservaSeis');
+const ReservaSiete = document.getElementById('reservaSiete');
+const ReservaOcho = document.getElementById('reservaOcho');
 
 // Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
