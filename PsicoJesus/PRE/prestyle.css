@@ -144,3 +144,9 @@ footer p {
   color: red;
   font-weight: bold;
 }
+
+/* Estilo para contacto */
+.contacto {
+  color: rgb(116, 92, 92);
+  font-weight: bold;
+}
