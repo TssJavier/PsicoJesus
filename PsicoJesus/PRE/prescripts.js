@@ -5,14 +5,6 @@ const onlineTarifas = document.getElementById('onlineTarifas');
 const presencialTarifas = document.getElementById('presencialTarifas');
 const formulario = document.getElementById('formulario');
 const form = document.getElementById('contactForm');
-const ReservaUno = document.getElementById('reservaUno');
-const ReservaDos = document.getElementById('reservaDos');
-const ReservaTres = document.getElementById('reservaTres');
-const ReservaCuatro = document.getElementById('reservaCuatro');
-const ReservaCinco = document.getElementById('reservaCinco');
-const ReservaSeis = document.getElementById('reservaSeis');
-const ReservaSiete = document.getElementById('reservaSiete');
-const ReservaOcho = document.getElementById('reservaOcho');
 
 // Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
@@ -20,12 +12,12 @@ presencialTarifas.style.display = 'none';
 formulario.style.display = 'none';
 
 // Añadir event listeners a los botones
-onlineBtn.addEventListener('click', function () {
+onlineBtn.addEventListener('click', function() {
     console.log('Botón Online clicado');
     toggleTarifas('online');
 });
 
-presencialBtn.addEventListener('click', function () {
+presencialBtn.addEventListener('click', function() {
     console.log('Botón Presencial clicado');
     toggleTarifas('presencial');
 });
@@ -33,43 +25,36 @@ presencialBtn.addEventListener('click', function () {
 // Función para alternar la visibilidad de las secciones de tarifas
 function toggleTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
-    hideAllSections(); // Ocultar todas las secciones
     if (tipo === 'online') {
-        onlineTarifas.style.display = 'block';
-        onlineBtn.style.display = 'none';
-        presencialBtn.style.display = 'none';
+        if (onlineTarifas.style.display === 'none' || onlineTarifas.style.display === '') {
+            onlineTarifas.style.display = 'block';
+            presencialTarifas.style.display = 'none';
+            onlineBtn.classList.add('active');
+            presencialBtn.classList.remove('active');
+        } else {
+            onlineTarifas.style.display = 'none';
+            onlineBtn.classList.remove('active');
+        }
     } else if (tipo === 'presencial') {
-        presencialTarifas.style.display = 'block';
-        onlineBtn.style.display = 'none';
-        presencialBtn.style.display = 'none';
+        if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
+            presencialTarifas.style.display = 'block';
+            onlineTarifas.style.display = 'none';
+            presencialBtn.classList.add('active');
+            onlineBtn.classList.remove('active');
+        } else {
+            presencialTarifas.style.display = 'none';
+            presencialBtn.classList.remove('active');
+        }
     }
 }
 
-// Añadir event listeners a los botones de reserva
-botonesReserva.forEach((boton, index) => {
-    boton.addEventListener('click', () => {
-        mostrarFormulario(index + 1);
-    });
-});
-
-// Función para mostrar el formulario con la tarifa seleccionada
-function mostrarFormulario(tarifa) {
-    hideAllSections(); // Ocultar todas las secciones primero
-    tarifaSeleccionada.value = tarifa;
+// Función para mostrar el formulario
+function mostrarFormulario(tipo, tarifa) {
     formulario.style.display = 'block';
 }
 
-// Función para ocultar todas las secciones
-function hideAllSections() {
-    onlineTarifas.style.display = 'none';
-    presencialTarifas.style.display = 'none';
-    formulario.style.display = 'none';
-    onlineBtn.style.display = 'block';
-    presencialBtn.style.display = 'block';
-}
-
 // Configuración del manejador de eventos del formulario
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
@@ -86,5 +71,5 @@ form.addEventListener('submit', function (event) {
 
     // Limpiar el formulario
     form.reset();
-    hideAllSections(); // Ocultar todas las secciones después de enviar el formulario
+    formulario.style.display = 'none';
 });
