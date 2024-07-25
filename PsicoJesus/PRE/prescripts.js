@@ -10,7 +10,7 @@ const tarifaSeleccionada = document.getElementById('tarifaSeleccionada');
 // Obtener los botones de reserva
 const botonesReserva = document.querySelectorAll('.tarifa button');
 
-// Asegurarse de que las secciones de tarifas están ocultas inicialmente
+// Asegurarse de que las secciones de tarifas y formulario están ocultas inicialmente
 onlineTarifas.style.display = 'none';
 presencialTarifas.style.display = 'none';
 formulario.style.display = 'none';
@@ -29,28 +29,13 @@ presencialBtn.addEventListener('click', function () {
 // Función para alternar la visibilidad de las secciones de tarifas
 function toggleTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
+    hideAllSections(); // Ocultar todas las secciones primero
     if (tipo === 'online') {
-        if (onlineTarifas.style.display === 'none' || onlineTarifas.style.display === '') {
-            onlineTarifas.style.display = 'block';
-            presencialTarifas.style.display = 'none';
-            onlineBtn.classList.add('active');
-            presencialBtn.classList.remove('active');
-        } else {
-            onlineTarifas.style.display = 'none';
-            onlineBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
-        }
+        onlineTarifas.style.display = 'block';
+        onlineBtn.classList.add('active');
     } else if (tipo === 'presencial') {
-        if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
-            presencialTarifas.style.display = 'block';
-            onlineTarifas.style.display = 'none';
-            presencialBtn.classList.add('active');
-            onlineBtn.classList.remove('active');
-        } else {
-            presencialTarifas.style.display = 'none';
-            presencialBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
-        }
+        presencialTarifas.style.display = 'block';
+        presencialBtn.classList.add('active');
     }
 }
 
@@ -63,8 +48,18 @@ botonesReserva.forEach((boton, index) => {
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
+    hideAllSections(); // Ocultar todas las secciones primero
     tarifaSeleccionada.value = tarifa;
     formulario.style.display = 'block';
+}
+
+// Función para ocultar todas las secciones
+function hideAllSections() {
+    onlineTarifas.style.display = 'none';
+    presencialTarifas.style.display = 'none';
+    formulario.style.display = 'none';
+    onlineBtn.classList.remove('active');
+    presencialBtn.classList.remove('active');
 }
 
 // Configuración del manejador de eventos del formulario
@@ -83,5 +78,5 @@ form.addEventListener('submit', function (event) {
 
     // Limpiar el formulario
     form.reset();
-    formulario.style.display = 'none';
+    hideAllSections(); // Ocultar todas las secciones después de enviar el formulario
 });
