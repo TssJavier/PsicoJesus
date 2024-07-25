@@ -5,12 +5,16 @@ const onlineTarifas = document.getElementById('onlineTarifas');
 const presencialTarifas = document.getElementById('presencialTarifas');
 const formulario = document.getElementById('formulario');
 const form = document.getElementById('contactForm');
-const tarifaSeleccionada = document.getElementById('tarifaSeleccionada');
+const ReservaUno = document.getElementById('reservaUno');
+const ReservaDos = document.getElementById('reservaDos');
+const ReservaTres = document.getElementById('reservaTres');
+const ReservaCuatro = document.getElementById('reservaCuatro');
+const ReservaCinco = document.getElementById('reservaCinco');
+const ReservaSeis = document.getElementById('reservaSeis');
+const ReservaSiete = document.getElementById('reservaSiete');
+const ReservaOcho = document.getElementById('reservaOcho');
 
-// Obtener los botones de reserva
-const botonesReserva = document.querySelectorAll('.tarifa button');
-
-// Asegurarse de que las secciones de tarifas y formulario están ocultas inicialmente
+// Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
 presencialTarifas.style.display = 'none';
 formulario.style.display = 'none';
@@ -50,7 +54,7 @@ botonesReserva.forEach((boton, index) => {
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
-    hideAllSections();
+    hideAllSections(); // Ocultar todas las secciones primero
     tarifaSeleccionada.value = tarifa;
     formulario.style.display = 'block';
 }
@@ -70,13 +74,15 @@ form.addEventListener('submit', function (event) {
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
     const fecha = document.getElementById('fecha').value;
-    const tarifa = tarifaSeleccionada.value;
+
+    // Aquí se puede añadir el código para enviar
+
 
     // Aquí se puede añadir el código para enviar el email
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. Tarifa seleccionada: ${tarifa}`);
+    alert('Formulario enviado. Nos pondremos en contacto contigo pronto.');
 
     // Limpiar el formulario
     form.reset();
