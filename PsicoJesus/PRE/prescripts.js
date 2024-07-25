@@ -29,24 +29,15 @@ presencialBtn.addEventListener('click', function () {
 // Función para alternar la visibilidad de las secciones de tarifas
 function toggleTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
+    hideAllSections(); // Ocultar todas las secciones
     if (tipo === 'online') {
-        if (onlineTarifas.style.display === 'none' || onlineTarifas.style.display === '') {
-            hideAllSections();
-            onlineTarifas.style.display = 'block';
-            onlineBtn.classList.add('active');
-        } else {
-            onlineTarifas.style.display = 'none';
-            onlineBtn.classList.remove('active');
-        }
+        onlineTarifas.style.display = 'block';
+        onlineBtn.style.display = 'none';
+        presencialBtn.style.display = 'none';
     } else if (tipo === 'presencial') {
-        if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
-            hideAllSections();
-            presencialTarifas.style.display = 'block';
-            presencialBtn.classList.add('active');
-        } else {
-            presencialTarifas.style.display = 'none';
-            presencialBtn.classList.remove('active');
-        }
+        presencialTarifas.style.display = 'block';
+        onlineBtn.style.display = 'none';
+        presencialBtn.style.display = 'none';
     }
 }
 
@@ -69,8 +60,8 @@ function hideAllSections() {
     onlineTarifas.style.display = 'none';
     presencialTarifas.style.display = 'none';
     formulario.style.display = 'none';
-    onlineBtn.classList.remove('active');
-    presencialBtn.classList.remove('active');
+    onlineBtn.style.display = 'block';
+    presencialBtn.style.display = 'block';
 }
 
 // Configuración del manejador de eventos del formulario
