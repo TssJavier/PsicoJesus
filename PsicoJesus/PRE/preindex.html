@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicología - Página Principal</title>
-    <link rel="stylesheet" href="prestyle.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesús Sánchez - Psicólogo Madrid</title>
+    <link rel="stylesheet" href="prestyle.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#metodologia">Metodología</a></li>
-                <li><a href="#opciones">Opciones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <h1>Bienvenidos a la página de Psicología</h1>
+      <nav>
+        <ul>
+          <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+          <li><a href="#opciones" class="nav-link">Opciones</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <h1>Bienvenidos a la página de Psicología</h1>
     </header>
     <main>
         <section id="metodologia">
@@ -36,12 +36,14 @@
                         <p>Precio: $50</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
+                        <button id="reservaUno">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Parejas</h4>
                         <p>Precio: $65</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
+                        <button id="reservaDos">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Individual</h4>
@@ -49,6 +51,7 @@
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
                         <p class="descuento">¡Llevate una sesión gratis!</p>
+                        <button id="reservaTres">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Parejas</h4>
@@ -56,6 +59,7 @@
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
                         <p class="descuento">¡Llevate una sesión gratis!</p>
+                        <button id="reservaCuatro">RESERVA</button>
                     </div>
                 </div>
             </div>
@@ -67,12 +71,14 @@
                         <p>Precio: $60</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
+                        <button id="reservaCinco">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Parejas</h4>
                         <p>Precio: $75</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
+                        <button id="reservaSeis">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Individual</h4>
@@ -80,6 +86,7 @@
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
                         <p class="descuento">¡Llevate una sesión gratis!</p>
+                        <button id="reservaSiete">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Parejas</h4>
@@ -87,6 +94,7 @@
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
                         <p class="descuento">¡Llevate una sesión gratis!</p>
+                        <button id="reservaOcho">RESERVA</button>
                     </div>
                 </div>
             </div>
@@ -100,17 +108,18 @@
                 <textarea id="descripcion" name="descripcion" required></textarea>
                 <label for="fecha">Fecha estimada de comienzo:</label>
                 <input type="date" id="fecha" name="fecha" required>
+                <input type="hidden" id="tarifaSeleccionada" name="tarifaSeleccionada">
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
     <footer>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: tu-email@dominio.com</p>
-            <p>Ubicación: Calle Falsa 123, Ciudad</p>
-        </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: tu-email@dominio.com</p>
+        <p>Ubicación: Calle Falsa 123, Ciudad</p>
+      </section>
     </footer>
     <script src="prescripts.js"></script>
-</body>
+  </body>
 </html>
