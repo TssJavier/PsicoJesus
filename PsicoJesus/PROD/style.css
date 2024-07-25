@@ -3,58 +3,58 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Fondo amarillo claro */
-body {
+  }
+  
+  /* Fondo amarillo claro */
+  body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #FFFACD; /* Color de fondo amarillo claro */
-}
-
-header {
+  }
+  
+  header {
     background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 10px 0;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin: 0 10px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #007BFF;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin-bottom: 20px;
-}
-
-main {
+  }
+  
+  main {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-}
-
-section {
+  }
+  
+  section {
     margin-bottom: 40px;
-}
-
-button {
+  }
+  
+  button {
     background-color: #007BFF;
     color: white;
     border: none;
@@ -63,33 +63,33 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin: 10px;
-}
-
-button.active {
+  }
+  
+  button.active {
     background-color: rgb(134, 21, 91); /* Color cuando está clicado */
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-form label {
+  }
+  
+  form label {
     margin: 10px 0 5px;
-}
-
-form input, form textarea {
+  }
+  
+  form input, form textarea {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-form button {
+  }
+  
+  form button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -98,32 +98,32 @@ form button {
     cursor: pointer;
     border-radius: 5px;
     margin: 10px;
-}
-
-form button:hover {
+  }
+  
+  form button:hover {
     background-color: #218838;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
-}
-
-footer p {
+  }
+  
+  footer p {
     margin: 5px 0;
-}
-
-/* Estilo para el contenedor de las tarifas */
-.tarifas-container {
+  }
+  
+  /* Estilo para el contenedor de las tarifas */
+  .tarifas-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px; /* Espacio entre las cajas de tarifas */
-}
-
-/* Estilo para cada tarifa */
-.tarifa {
+  }
+  
+  /* Estilo para cada tarifa */
+  .tarifa {
     border: 3px solid #313323;
     border-radius: 5px;
     padding: 7px;
@@ -132,15 +132,16 @@ footer p {
     max-width: 230px; /* Ancho máximo para evitar que las cajas sean demasiado anchas */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
     margin: 0 auto; /* Centra las cajas dentro de su contenedor */
-}
-
-/* Estilo para el nombre y detalles de la tarifa */
-.tarifa h4 {
+  }
+  
+  /* Estilo para el nombre y detalles de la tarifa */
+  .tarifa h4 {
     margin-top: 0;
-}
-
-/* Estilo para el mensaje de descuento */
-.descuento {
+  }
+  
+  /* Estilo para el mensaje de descuento */
+  .descuento {
     color: red;
     font-weight: bold;
-}
+  }
+  
