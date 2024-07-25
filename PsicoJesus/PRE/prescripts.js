@@ -5,14 +5,10 @@ const onlineTarifas = document.getElementById('onlineTarifas');
 const presencialTarifas = document.getElementById('presencialTarifas');
 const formulario = document.getElementById('formulario');
 const form = document.getElementById('contactForm');
-const ReservaUno = document.getElementById('reservaUno');
-const ReservaDos = document.getElementById('reservaDos');
-const ReservaTres = document.getElementById('reservaTres');
-const ReservaCuatro = document.getElementById('reservaCuatro');
-const ReservaCinco = document.getElementById('reservaCinco');
-const ReservaSeis = document.getElementById('reservaSeis');
-const ReservaSiete = document.getElementById('reservaSiete');
-const ReservaOcho = document.getElementById('reservaOcho');
+const tarifaSeleccionada = document.getElementById('tarifaSeleccionada');
+
+// Obtener los botones de reserva
+const botonesReserva = document.querySelectorAll('.tarifa button');
 
 // Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
@@ -39,11 +35,9 @@ function toggleTarifas(tipo) {
             presencialTarifas.style.display = 'none';
             onlineBtn.classList.add('active');
             presencialBtn.classList.remove('active');
-            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
         } else {
             onlineTarifas.style.display = 'none';
             onlineBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     } else if (tipo === 'presencial') {
         if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
@@ -51,17 +45,23 @@ function toggleTarifas(tipo) {
             onlineTarifas.style.display = 'none';
             presencialBtn.classList.add('active');
             onlineBtn.classList.remove('active');
-            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
         } else {
             presencialTarifas.style.display = 'none';
             presencialBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     }
 }
 
-// Función para mostrar el formulario
-function mostrarFormulario(tipo, tarifa) {
+// Añadir event listeners a los botones de reserva
+botonesReserva.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+        mostrarFormulario(index + 1);
+    });
+});
+
+// Función para mostrar el formulario con la tarifa seleccionada
+function mostrarFormulario(tarifa) {
+    tarifaSeleccionada.value = tarifa;
     formulario.style.display = 'block';
 }
 
@@ -71,15 +71,13 @@ form.addEventListener('submit', function (event) {
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
     const fecha = document.getElementById('fecha').value;
-
-    // Aquí se puede añadir el código para enviar
-
+    const tarifa = tarifaSeleccionada.value;
 
     // Aquí se puede añadir el código para enviar el email
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert('Formulario enviado. Nos pondremos en contacto contigo pronto.');
+    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. Tarifa seleccionada: ${tarifa}`);
 
     // Limpiar el formulario
     form.reset();
