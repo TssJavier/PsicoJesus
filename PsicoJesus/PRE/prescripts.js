@@ -38,6 +38,7 @@ function toggleTarifas(tipo) {
         } else {
             onlineTarifas.style.display = 'none';
             onlineBtn.classList.remove('active');
+            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     } else if (tipo === 'presencial') {
         if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
@@ -48,6 +49,7 @@ function toggleTarifas(tipo) {
         } else {
             presencialTarifas.style.display = 'none';
             presencialBtn.classList.remove('active');
+            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
         }
     }
 }
