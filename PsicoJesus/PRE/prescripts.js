@@ -34,34 +34,25 @@ presencialBtn.addEventListener('click', function () {
 function toggleTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
     if (tipo === 'online') {
-        if (onlineTarifas.style.display === 'none' || onlineTarifas.style.display === '') {
-            onlineTarifas.style.display = 'block';
-            presencialTarifas.style.display = 'none';
-            onlineBtn.classList.add('active');
-            presencialBtn.classList.remove('active');
-            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
-        } else {
-            onlineTarifas.style.display = 'none';
-            onlineBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
-        }
+        onlineTarifas.style.display = 'block';
+        onlineBtn.classList.add('active');
     } else if (tipo === 'presencial') {
-        if (presencialTarifas.style.display === 'none' || presencialTarifas.style.display === '') {
-            presencialTarifas.style.display = 'block';
-            onlineTarifas.style.display = 'none';
-            presencialBtn.classList.add('active');
-            onlineBtn.classList.remove('active');
-            mostrarFormulario(); // Muestra el formulario al seleccionar una tarifa
-        } else {
-            presencialTarifas.style.display = 'none';
-            presencialBtn.classList.remove('active');
-            formulario.style.display = 'none'; // Oculta el formulario si se ocultan las tarifas
-        }
+        presencialTarifas.style.display = 'block';
+        presencialBtn.classList.add('active');
     }
 }
 
-// Función para mostrar el formulario
-function mostrarFormulario(tipo, tarifa) {
+// Añadir event listeners a los botones de reserva
+botonesReserva.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+        mostrarFormulario(index + 1);
+    });
+});
+
+// Función para mostrar el formulario con la tarifa seleccionada
+function mostrarFormulario(tarifa) {
+    hideAllSections(); // Ocultar todas las secciones primero
+    tarifaSeleccionada.value = tarifa;
     formulario.style.display = 'block';
 }
 
