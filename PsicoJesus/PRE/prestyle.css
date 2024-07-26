@@ -151,3 +151,14 @@ footer p {
   font-weight: bold;
 }
 
+/* Transición de visibilidad para las secciones de tarifas */
+#onlineTarifas, #presencialTarifas, #formulario {
+  opacity: 0;
+  transform: translateY(-20px); /* Desplazamiento inicial hacia arriba */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+}
+
+#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
+  opacity: 1;
+  transform: translateY(0); /* Desplazamiento final a la posición original */
+}
