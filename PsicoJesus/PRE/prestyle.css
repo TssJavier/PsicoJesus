@@ -63,7 +63,6 @@ button {
   cursor: pointer;
   border-radius: 5px;
   margin: 10px;
-  transition: background-color 0.3s ease; /* Transición de color de fondo */
 }
 
 button.active {
@@ -152,43 +151,22 @@ footer p {
   font-weight: bold;
 }
 
-/* Transiciones */
-.transition {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+/* Transición de visibilidad para las secciones de tarifas */
+#onlineTarifas, #presencialTarifas, #formulario {
+  opacity: 0;
+  transform: translateY(-20px); /* Desplazamiento inicial hacia arriba */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
 }
 
-/* Estilo para el formulario */
-#formulario {
-  position: absolute; /* Posiciona el formulario sobre el contenido */
-  top: 0; /* Alinea el formulario al principio del contenedor padre */
-  left: 0;
-  width: 100%; /* Ocupa todo el ancho del contenedor padre */
-  height: 100%; /* Ocupa todo el alto del contenedor padre */
-  background-color: #FFF; /* Fondo blanco para el formulario */
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra para el formulario */
-  display: none; /* Oculto por defecto */
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
-  opacity: 0; /* Inicialmente invisible */
-  transform: translateY(-20px); /* Inicialmente desplazado hacia arriba */
+#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
+  opacity: 1;
+  transform: translateY(0); /* Desplazamiento final a la posición original */
 }
 
-/* Añadir una clase activa para mostrar con transición */
-#formulario.active {
-  display: block; /* Mostrar formulario */
-  opacity: 1; /* Hacerlo visible */
-  transform: translateY(0); /* Restablecer el desplazamiento vertical */
+#onlineTarifas, #presencialTarifas, #formulario {
+  display: none; /* Ocultar secciones inicialmente */
 }
 
-/* Estilo para las tarifas */
-#onlineTarifas, #presencialTarifas {
-  opacity: 1; /* Asegura que sean visibles */
-  transform: translateY(0); /* Asegura que estén en su posición original */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición para ocultación */
-}
-
-/* Añadir una clase activa para ocultar con transición */
-#onlineTarifas.hidden, #presencialTarifas.hidden {
-  opacity: 0; /* Ocultar tarifas con transición */
-  transform: translateY(-20px); /* Desplazamiento vertical para suavizar la salida */
+#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
+  display: block; /* Mostrar secciones cuando tienen la clase 'active' */
 }
