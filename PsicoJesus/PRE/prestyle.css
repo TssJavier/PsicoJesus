@@ -170,3 +170,8 @@ footer p {
 .tarifas.active, #formulario.active {
   display: block; /* Mostrar secciones cuando tienen la clase 'active' */
 }
+
+/* Asegura que el formulario se alinee correctamente después de las tarifas */
+#formulario {
+  margin-top: 20px; /* Ajusta según el diseño */
+}
