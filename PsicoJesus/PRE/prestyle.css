@@ -145,12 +145,6 @@ footer p {
   font-weight: bold;
 }
 
-/* Estilo para contacto */
-.contacto {
-  color: rgb(116, 92, 92);
-  font-weight: bold;
-}
-
 /* Estilo para el formulario en transición */
 #formulario {
   position: absolute;
@@ -160,7 +154,7 @@ footer p {
   background-color: #FFFACD; /* Color de fondo del formulario */
   z-index: 10; /* Asegura que esté por encima de otros elementos */
   transform: translateY(100px); /* Ajusta según la altura de las tarifas */
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0; /* Inicialmente oculto */
 }
 

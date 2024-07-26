@@ -29,7 +29,7 @@ function mostrarTarifas(tipo) {
     presencialTarifas.classList.add('hidden');
     formulario.classList.add('hidden');
 
-    // Esperar un pequeño retraso para asegurar que el formulario esté oculto antes de mostrar tarifas
+    // Mostrar la sección de tarifas adecuada
     setTimeout(() => {
         if (tipo === 'online') {
             onlineTarifas.classList.remove('hidden');
