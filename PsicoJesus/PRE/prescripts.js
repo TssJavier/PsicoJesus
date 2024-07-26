@@ -22,24 +22,27 @@ let tipoTarifaActual = '';
 function mostrarTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
     tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
-    document.getElementById('opciones').classList.add('hidden'); // Cambiar a clase 'hidden'
+    document.getElementById('opciones').classList.add('hidden');
     
     // Ocultar todas las secciones de tarifas y formulario
     onlineTarifas.classList.add('hidden');
     presencialTarifas.classList.add('hidden');
     formulario.classList.add('hidden');
 
-    if (tipo === 'online') {
-        onlineTarifas.classList.remove('hidden');
-        setTimeout(() => {
-            onlineTarifas.classList.add('active');
-        }, 10); // Pequeño retraso para permitir que la transición se aplique
-    } else if (tipo === 'presencial') {
-        presencialTarifas.classList.remove('hidden');
-        setTimeout(() => {
-            presencialTarifas.classList.add('active');
-        }, 10); // Pequeño retraso para permitir que la transición se aplique
-    }
+    // Esperar un pequeño retraso para asegurar que el formulario esté oculto antes de mostrar tarifas
+    setTimeout(() => {
+        if (tipo === 'online') {
+            onlineTarifas.classList.remove('hidden');
+            setTimeout(() => {
+                onlineTarifas.classList.add('active');
+            }, 10); // Pequeño retraso para permitir que la transición se aplique
+        } else if (tipo === 'presencial') {
+            presencialTarifas.classList.remove('hidden');
+            setTimeout(() => {
+                presencialTarifas.classList.add('active');
+            }, 10); // Pequeño retraso para permitir que la transición se aplique
+        }
+    }, 10);
 }
 
 // Añadir event listeners a los botones
@@ -54,13 +57,8 @@ function mostrarFormulario(tarifa) {
     presencialTarifas.classList.remove('active');
     
     // Preparar formulario para animar a la posición correcta
-    formulario.classList.add('transitioning');
-    
-    // Esperar a que la transición sea visible
-    setTimeout(() => {
-        formulario.classList.add('active');
-        formulario.classList.remove('transitioning');
-    }, 10); // Pequeño retraso para permitir que la transición se aplique
+    formulario.classList.remove('hidden');
+    formulario.classList.add('active');
 }
 
 // Event listeners para los botones de reserva

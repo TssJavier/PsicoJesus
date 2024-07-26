@@ -152,7 +152,7 @@ footer p {
 }
 
 /* Estilo para el formulario en transición */
-#formulario.transitioning {
+#formulario {
   position: absolute;
   top: 0; /* Ajustar según la altura del header */
   left: 0;
@@ -161,13 +161,14 @@ footer p {
   z-index: 10; /* Asegura que esté por encima de otros elementos */
   transform: translateY(100px); /* Ajusta según la altura de las tarifas */
   transition: transform 0.5s ease;
+  opacity: 0; /* Inicialmente oculto */
 }
 
-#formulario.transitioning.active {
+#formulario.active {
   transform: translateY(0);
+  opacity: 1; /* Hacer visible */
 }
 
-/* Ocultar el formulario y tarifas al inicio */
 .hidden {
-  display: none;
+  display: none; /* Ocultar elementos */
 }
