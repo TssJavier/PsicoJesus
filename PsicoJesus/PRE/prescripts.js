@@ -10,6 +10,11 @@ const tarifaSeleccionada = document.getElementById('tarifaSeleccionada');
 // Obtener los botones de reserva
 const botonesReserva = document.querySelectorAll('.tarifa button');
 
+// Obtener los botones de volver
+const backToOptionsFromOnline = document.getElementById('backToOptionsFromOnline');
+const backToOptionsFromPresencial = document.getElementById('backToOptionsFromPresencial');
+const backToTarifas = document.getElementById('backToTarifas');
+
 // Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
 presencialTarifas.style.display = 'none';
@@ -54,6 +59,27 @@ function mostrarFormulario(tarifa) {
     presencialTarifas.style.display = 'none';
     formulario.style.display = 'block';
 }
+
+// Event listeners para los botones de volver
+backToOptionsFromOnline.addEventListener('click', function () {
+    onlineTarifas.style.display = 'none';
+    document.getElementById('opciones').style.display = 'block';
+});
+
+backToOptionsFromPresencial.addEventListener('click', function () {
+    presencialTarifas.style.display = 'none';
+    document.getElementById('opciones').style.display = 'block';
+});
+
+backToTarifas.addEventListener('click', function () {
+    formulario.style.display = 'none';
+    const tipo = onlineTarifas.style.display === 'block' ? 'online' : 'presencial';
+    if (tipo === 'online') {
+        onlineTarifas.style.display = 'block';
+    } else if (tipo === 'presencial') {
+        presencialTarifas.style.display = 'block';
+    }
+});
 
 // Configuración del manejador de eventos del formulario
 form.addEventListener('submit', function (event) {
