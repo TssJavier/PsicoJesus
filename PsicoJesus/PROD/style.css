@@ -170,7 +170,6 @@ footer p {
   margin-top: 20px; /* Ajusta según el diseño */
 }
 
-
 /* Estilos para centrar y cambiar el tamaño de las cajas del formulario */
 form {
   display: flex;
@@ -228,16 +227,17 @@ form button:hover {
 }
 
 /* Estilo para la etiqueta de la casilla de verificación */
-form label[for="privacy"] {
-  display: flex;
-  align-items: center; /* Alinear verticalmente el texto y la casilla de verificación */
-  margin-bottom: 20px; /* Margen inferior */
-  font-weight: normal; /* Quitar negrita */
-  color: #333; /* Color del texto */
-  justify-content: flex-start; /* Alinear al principio */
+form .privacy-container {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* Estilo para la casilla de verificación */
 form input[type="checkbox"] {
-  margin-right: 1px; /* Espacio entre la casilla de verificación y el texto */
+  margin-right: 10px;
+  margin-top: 20px;
 }
