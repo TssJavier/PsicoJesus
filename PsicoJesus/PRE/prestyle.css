@@ -238,5 +238,5 @@ form label[for="privacy"] {
 
 /* Estilo para la casilla de verificación */
 form input[type="checkbox"] {
-  margin-right: 10px; /* Espacio entre la casilla de verificación y el texto */
+  margin-right: 2px; /* Espacio entre la casilla de verificación y el texto */
 }
