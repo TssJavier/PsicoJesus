@@ -151,22 +151,23 @@ footer p {
   font-weight: bold;
 }
 
-/* Transición de visibilidad para las secciones de tarifas */
-#onlineTarifas, #presencialTarifas, #formulario {
-  opacity: 0;
-  transform: translateY(-20px); /* Desplazamiento inicial hacia arriba */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+/* Estilo para el formulario en transición */
+#formulario.transitioning {
+  position: absolute;
+  top: 0; /* Ajustar según la altura del header */
+  left: 0;
+  width: 100%;
+  background-color: #FFFACD; /* Color de fondo del formulario */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  transform: translateY(100px); /* Ajusta según la altura de las tarifas */
+  transition: transform 0.5s ease;
 }
 
-#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
-  opacity: 1;
-  transform: translateY(0); /* Desplazamiento final a la posición original */
+#formulario.transitioning.active {
+  transform: translateY(0);
 }
 
-#onlineTarifas, #presencialTarifas, #formulario {
-  display: none; /* Ocultar secciones inicialmente */
-}
-
-#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
-  display: block; /* Mostrar secciones cuando tienen la clase 'active' */
+/* Ocultar el formulario y tarifas al inicio */
+.hidden {
+  display: none;
 }
