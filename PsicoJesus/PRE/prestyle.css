@@ -230,8 +230,8 @@ form button:hover {
 /* Estilo para la etiqueta de la casilla de verificación */
 form label[for="privacy"] {
   display: flex;
-  align-items: center; /* Alinear verticalmente el texto y la casilla de verificación */
-  margin-bottom: 20px; /* Margen inferior */
+  align-items: left; /* Alinear verticalmente el texto y la casilla de verificación */
+  margin-bottom: 10px; /* Margen inferior */
   font-weight: normal; /* Quitar negrita */
   color: #333; /* Color del texto */
 }
