@@ -100,13 +100,20 @@ backToTarifas.addEventListener('click', () => {
     }
 });
 
-// Configuración del manejador de eventos del formulario
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
     const fecha = document.getElementById('fecha').value;
     const tarifa = tarifaSeleccionada.value;
+    const privacy = document.getElementById('privacy');
+
+    // Verificar si la casilla de privacidad está marcada
+    if (!privacy.checked) {
+        alert('Debes aceptar la política de privacidad y el aviso legal para continuar.');
+        return; // Salir de la función sin enviar el formulario
+    }
 
     // Aquí se puede añadir el código para enviar el email
     // Esto generalmente se haría mediante una llamada a un backend
@@ -117,6 +124,5 @@ form.addEventListener('submit', (event) => {
     // Limpiar el formulario
     form.reset();
     formulario.classList.remove('active');
-    formulario.style.display = 'none';
     document.getElementById('opciones').style.display = 'block'; // Volver a mostrar los botones de opciones
 });
