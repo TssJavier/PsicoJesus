@@ -20,7 +20,6 @@ let tipoTarifaActual = '';
 
 // Función para mostrar tarifas y ocultar botones de opciones
 function mostrarTarifas(tipo) {
-    console.log('Tipo seleccionado:', tipo);
     tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
     document.getElementById('opciones').classList.add('hidden');
     
@@ -33,14 +32,8 @@ function mostrarTarifas(tipo) {
     setTimeout(() => {
         if (tipo === 'online') {
             onlineTarifas.classList.remove('hidden');
-            setTimeout(() => {
-                onlineTarifas.classList.add('active');
-            }, 10); // Pequeño retraso para permitir que la transición se aplique
         } else if (tipo === 'presencial') {
             presencialTarifas.classList.remove('hidden');
-            setTimeout(() => {
-                presencialTarifas.classList.add('active');
-            }, 10); // Pequeño retraso para permitir que la transición se aplique
         }
     }, 10);
 }
@@ -51,14 +44,10 @@ presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
-    console.log('Tarifa seleccionada:', tarifa);
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
-    onlineTarifas.classList.remove('active');
-    presencialTarifas.classList.remove('active');
-    
-    // Preparar formulario para animar a la posición correcta
+    onlineTarifas.classList.add('hidden');
+    presencialTarifas.classList.add('hidden');
     formulario.classList.remove('hidden');
-    formulario.classList.add('active');
 }
 
 // Event listeners para los botones de reserva
@@ -70,22 +59,21 @@ botonesReserva.forEach((boton, index) => {
 
 // Event listeners para los botones de volver
 backToOptionsFromOnline.addEventListener('click', () => {
-    onlineTarifas.classList.remove('active');
+    onlineTarifas.classList.add('hidden');
     document.getElementById('opciones').classList.remove('hidden');
 });
 
 backToOptionsFromPresencial.addEventListener('click', () => {
-    presencialTarifas.classList.remove('active');
+    presencialTarifas.classList.add('hidden');
     document.getElementById('opciones').classList.remove('hidden');
 });
 
 backToTarifas.addEventListener('click', () => {
-    formulario.classList.remove('active');
-    formulario.classList.add('hidden'); // Ocultar formulario
+    formulario.classList.add('hidden');
     if (tipoTarifaActual === 'online') {
-        onlineTarifas.classList.add('active');
+        onlineTarifas.classList.remove('hidden');
     } else if (tipoTarifaActual === 'presencial') {
-        presencialTarifas.classList.add('active');
+        presencialTarifas.classList.remove('hidden');
     }
     document.getElementById('opciones').classList.remove('hidden');
 });
@@ -106,7 +94,6 @@ form.addEventListener('submit', (event) => {
 
     // Limpiar el formulario
     form.reset();
-    formulario.classList.remove('active');
     formulario.classList.add('hidden'); // Ocultar formulario
     document.getElementById('opciones').classList.remove('hidden'); // Volver a mostrar los botones de opciones
 });
