@@ -36,14 +36,14 @@ function mostrarTarifas(tipo) {
             onlineTarifas.style.display = 'block';
             setTimeout(() => {
                 onlineTarifas.classList.add('active');
-            }, 10);
+            }, 5);
         } else if (tipo === 'presencial') {
             presencialTarifas.style.display = 'block';
             setTimeout(() => {
                 presencialTarifas.classList.add('active');
-            }, 10);
+            }, 5);
         }
-    }, 300); // Ajusta el tiempo según el CSS de transición
+    }, 200); // Ajusta el tiempo según el CSS de transición
 }
 
 // Añadir event listeners a los botones
@@ -64,7 +64,7 @@ function mostrarFormulario(tarifa) {
     formulario.style.display = 'block';
     setTimeout(() => {
         formulario.classList.add('active');
-    }, 10);
+    }, 5);
 }
 
 // Event listeners para los botones de reserva
