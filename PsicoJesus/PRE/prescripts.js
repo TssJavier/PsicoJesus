@@ -54,7 +54,7 @@ botonesReserva.forEach((boton, index) => {
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
     console.log('Tarifa seleccionada:', tarifa);
-    tarifaSeleccionada.value = tarifa;
+    tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
     onlineTarifas.style.display = 'none';
     presencialTarifas.style.display = 'none';
     formulario.style.display = 'block';
@@ -93,7 +93,7 @@ form.addEventListener('submit', function (event) {
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. Tarifa seleccionada: ${tarifa}`);
+    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. ${tarifa}`);
 
     // Limpiar el formulario
     form.reset();
