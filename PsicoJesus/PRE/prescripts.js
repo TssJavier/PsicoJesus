@@ -23,30 +23,47 @@ function mostrarTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
     tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
     document.getElementById('opciones').style.display = 'none';
-
+    
     // Ocultar todas las secciones de tarifas y formulario
-    onlineTarifas.classList.remove('active');
-    presencialTarifas.classList.remove('active');
-    formulario.classList.remove('active');
+    onlineTarifas.style.display = 'none';
+    presencialTarifas.style.display = 'none';
+    formulario.style.display = 'none';
 
     if (tipo === 'online') {
-        onlineTarifas.classList.add('active');
+        onlineTarifas.style.display = 'block';
+        setTimeout(() => {
+            onlineTarifas.classList.add('active');
+        }, 10); // Pequeño retraso para permitir que la transición se aplique
     } else if (tipo === 'presencial') {
-        presencialTarifas.classList.add('active');
+        presencialTarifas.style.display = 'block';
+        setTimeout(() => {
+            presencialTarifas.classList.add('active');
+        }, 10); // Pequeño retraso para permitir que la transición se aplique
     }
 }
+
+// Añadir event listeners a los botones
+onlineBtn.addEventListener('click', () => mostrarTarifas('online'));
+presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
     console.log('Tarifa seleccionada:', tarifa);
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
-    
-    // Ocultar tarifas y mostrar formulario
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
-    
-    formulario.classList.add('active');
+    formulario.style.display = 'block';
+    setTimeout(() => {
+        formulario.classList.add('active');
+    }, 10); // Pequeño retraso para permitir que la transición se aplique
 }
+
+// Event listeners para los botones de reserva
+botonesReserva.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+        mostrarFormulario(index + 1);
+    });
+});
 
 // Event listeners para los botones de volver
 backToOptionsFromOnline.addEventListener('click', () => {
@@ -67,7 +84,6 @@ backToTarifas.addEventListener('click', () => {
         presencialTarifas.classList.add('active');
     }
 });
-
 
 // Configuración del manejador de eventos del formulario
 form.addEventListener('submit', (event) => {
