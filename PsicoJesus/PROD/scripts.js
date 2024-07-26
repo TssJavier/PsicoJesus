@@ -15,6 +15,9 @@ const backToOptionsFromOnline = document.getElementById('backToOptionsFromOnline
 const backToOptionsFromPresencial = document.getElementById('backToOptionsFromPresencial');
 const backToTarifas = document.getElementById('backToTarifas');
 
+// Variable para almacenar el tipo de tarifa actual
+let tipoTarifaActual = '';
+
 // Asegurarse de que las secciones de tarifas están ocultas inicialmente
 onlineTarifas.style.display = 'none';
 presencialTarifas.style.display = 'none';
@@ -34,6 +37,7 @@ presencialBtn.addEventListener('click', function () {
 // Función para mostrar tarifas y ocultar botones de opciones
 function mostrarTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
+    tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
     document.getElementById('opciones').style.display = 'none';
     if (tipo === 'online') {
         onlineTarifas.style.display = 'block';
@@ -54,7 +58,7 @@ botonesReserva.forEach((boton, index) => {
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
     console.log('Tarifa seleccionada:', tarifa);
-    tarifaSeleccionada.value = tarifa;
+    tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
     onlineTarifas.style.display = 'none';
     presencialTarifas.style.display = 'none';
     formulario.style.display = 'block';
@@ -73,10 +77,9 @@ backToOptionsFromPresencial.addEventListener('click', function () {
 
 backToTarifas.addEventListener('click', function () {
     formulario.style.display = 'none';
-    const tipo = onlineTarifas.style.display === 'block' ? 'online' : 'presencial';
-    if (tipo === 'online') {
+    if (tipoTarifaActual === 'online') {
         onlineTarifas.style.display = 'block';
-    } else if (tipo === 'presencial') {
+    } else if (tipoTarifaActual === 'presencial') {
         presencialTarifas.style.display = 'block';
     }
 });
@@ -93,7 +96,7 @@ form.addEventListener('submit', function (event) {
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. Tarifa seleccionada: ${tarifa}`);
+    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. ${tarifa}`);
 
     // Limpiar el formulario
     form.reset();
