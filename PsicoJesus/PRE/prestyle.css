@@ -228,16 +228,18 @@ form button:hover {
 }
 
 /* Estilo para la etiqueta de la casilla de verificación */
-form label[for="privacy"] {
-  display: flex;
-  align-items: center; /* Alinear verticalmente el texto y la casilla de verificación */
+form .privacy-container {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: center; /* Alinea verticalmente el checkbox y el texto */
   margin-bottom: 20px; /* Margen inferior */
-  font-weight: normal; /* Quitar negrita */
+  width: 100%; /* Asegura que la fila ocupe el 100% del ancho del formulario */
+  font-weight: normal; /* Fuente normal */
   color: #333; /* Color del texto */
-  justify-content: flex-start; /* Alinear al principio */
 }
 
 /* Estilo para la casilla de verificación */
 form input[type="checkbox"] {
-  margin-right: 1px; /* Espacio entre la casilla de verificación y el texto */
+  margin-right: 10px; /* Espacio entre la casilla de verificación y el texto */
+  margin-left: 0; /* Elimina cualquier margen izquierdo adicional */
 }
+
