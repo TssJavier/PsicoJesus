@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jesús Sánchez - Psicólogo Madrid</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prestyle.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+          <li><a href="#metodologia" class="nav-link">Sobre Mí</a></li>
           <li><a href="#opciones" class="nav-link">Opciones</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -19,7 +19,8 @@
     </header>
     <main>
         <section id="metodologia">
-            <h2>Metodología</h2>
+            <h2>Sobre Mí</h2>
+            <h3>Metodologías</h3>
             <p>Aquí se explica la metodología del psicólogo.</p>
         </section>
         <section id="opciones">
@@ -62,6 +63,7 @@
                         <button id="reservaCuatro">RESERVA</button>
                     </div>
                 </div>
+                <button id="backToOptionsFromOnline">Volver</button>
             </div>
             <div id="presencialTarifas" style="display: none;">
                 <h3>Tarifas Presenciales</h3>
@@ -97,6 +99,7 @@
                         <button id="reservaOcho">RESERVA</button>
                     </div>
                 </div>
+                <button id="backToOptionsFromPresencial">Volver</button>
             </div>
         </section>
         <section id="formulario" style="display: none;">
@@ -111,15 +114,17 @@
                 <input type="hidden" id="tarifaSeleccionada" name="tarifaSeleccionada">
                 <button type="submit">Enviar</button>
             </form>
+            <button id="backToTarifas">Volver</button>
         </section>
     </main>
     <footer>
       <section id="contacto">
         <h2>Contacto</h2>
-        <p>Email: tu-email@dominio.com</p>
-        <p>Ubicación: Calle Falsa 123, Ciudad</p>
+        <p class="descuento">Email: jschezpsicolog@hotmail.com</p>
+        <p class="descuento">Dirección: Madrid - Zona metro Bilbao</p>
+        <p class="descuento">Teléfono: 687-95-00-77</p>
       </section>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="prescripts.js"></script>
   </body>
 </html>
