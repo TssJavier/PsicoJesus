@@ -101,17 +101,21 @@
                 <button id="backToOptionsFromPresencial">Volver</button>
             </div>
         </section>
-        <section id="formulario" class="tarifas">
+        <section id="formulario" style="display: none;">
             <h2>Formulario de Contacto</h2>
             <form id="contactForm">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" required></textarea>
+                
                 <label for="fecha">Fecha estimada de comienzo:</label>
                 <input type="date" id="fecha" name="fecha" required>
+                
                 <label for="tarifaSeleccionada">Tarifa seleccionada:</label>
                 <input type="text" id="tarifaSeleccionada" name="tarifaSeleccionada" readonly>
+                
                 <button type="submit">Enviar</button>
             </form>
             <button id="backToTarifas">Volver</button>
