@@ -28,8 +28,7 @@
             <button id="presencialBtn">PRESENCIAL</button>
         </section>
         <section id="tarifas">
-            <h2></h2>
-            <div id="onlineTarifas" style="display: none;">
+            <div id="onlineTarifas" class="tarifas">
                 <h3>Tarifas Online</h3>
                 <div class="tarifas-container">
                     <div class="tarifa">
@@ -37,35 +36,35 @@
                         <p>Precio: $50</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
-                        <button id="reservaUno">RESERVA</button>
+                        <button class="reserva-btn" data-tarifa="Online Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Parejas</h4>
                         <p>Precio: $65</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
-                        <button id="reservaDos">RESERVA</button>
+                        <button class="reserva-btn" data-tarifa="Online Parejas">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Individual</h4>
                         <p>Precio: $150</p>
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
-                        <p class="descuento">¡Llevate una sesión gratis!</p>
-                        <button id="reservaTres">RESERVA</button>
+                        <p class="descuento">¡Llévate una sesión gratis!</p>
+                        <button class="reserva-btn" data-tarifa="Online Bono Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Parejas</h4>
                         <p>Precio: $195</p>
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
-                        <p class="descuento">¡Llevate una sesión gratis!</p>
-                        <button id="reservaCuatro">RESERVA</button>
+                        <p class="descuento">¡Llévate una sesión gratis!</p>
+                        <button class="reserva-btn" data-tarifa="Online Bono Parejas">RESERVA</button>
                     </div>
                 </div>
                 <button id="backToOptionsFromOnline">Volver</button>
             </div>
-            <div id="presencialTarifas" style="display: none;">
+            <div id="presencialTarifas" class="tarifas">
                 <h3>Tarifas Presenciales</h3>
                 <div class="tarifas-container">
                     <div class="tarifa">
@@ -73,36 +72,36 @@
                         <p>Precio: $60</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
-                        <button id="reservaCinco">RESERVA</button>
+                        <button class="reserva-btn" data-tarifa="Presencial Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Parejas</h4>
                         <p>Precio: $75</p>
                         <p>Sesiones: 1</p>
                         <p>Duración: 1 hora</p>
-                        <button id="reservaSeis">RESERVA</button>
+                        <button class="reserva-btn" data-tarifa="Presencial Parejas">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Individual</h4>
                         <p>Precio: $180</p>
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
-                        <p class="descuento">¡Llevate una sesión gratis!</p>
-                        <button id="reservaSiete">RESERVA</button>
+                        <p class="descuento">¡Llévate una sesión gratis!</p>
+                        <button class="reserva-btn" data-tarifa="Presencial Bono Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
                         <h4>Bono Parejas</h4>
                         <p>Precio: $225</p>
                         <p>Sesiones: 4</p>
                         <p>Duración: 4 horas</p>
-                        <p class="descuento">¡Llevate una sesión gratis!</p>
-                        <button id="reservaOcho">RESERVA</button>
+                        <p class="descuento">¡Llévate una sesión gratis!</p>
+                        <button class="reserva-btn" data-tarifa="Presencial Bono Parejas">RESERVA</button>
                     </div>
                 </div>
                 <button id="backToOptionsFromPresencial">Volver</button>
             </div>
         </section>
-        <section id="formulario" style="display: none;">
+        <section id="formulario" class="tarifas">
             <h2>Formulario de Contacto</h2>
             <form id="contactForm">
                 <label for="email">Email:</label>

@@ -8,7 +8,7 @@ const form = document.getElementById('contactForm');
 const tarifaSeleccionada = document.getElementById('tarifaSeleccionada');
 
 // Obtener los botones de reserva
-const botonesReserva = document.querySelectorAll('.tarifa button');
+const botonesReserva = document.querySelectorAll('.reserva-btn');
 
 // Obtener los botones de volver
 const backToOptionsFromOnline = document.getElementById('backToOptionsFromOnline');
@@ -20,7 +20,6 @@ let tipoTarifaActual = '';
 
 // Función para mostrar tarifas y ocultar botones de opciones
 function mostrarTarifas(tipo) {
-    console.log('Tipo seleccionado:', tipo);
     tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
     document.getElementById('opciones').style.display = 'none';
     
@@ -48,7 +47,6 @@ presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
-    console.log('Tarifa seleccionada:', tarifa);
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
@@ -59,9 +57,9 @@ function mostrarFormulario(tarifa) {
 }
 
 // Event listeners para los botones de reserva
-botonesReserva.forEach((boton, index) => {
+botonesReserva.forEach((boton) => {
     boton.addEventListener('click', () => {
-        mostrarFormulario(index + 1);
+        mostrarFormulario(boton.getAttribute('data-tarifa'));
     });
 });
 
