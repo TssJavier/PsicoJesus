@@ -18,44 +18,33 @@ const backToTarifas = document.getElementById('backToTarifas');
 // Variable para almacenar el tipo de tarifa actual
 let tipoTarifaActual = '';
 
-// Asegurarse de que las secciones de tarifas están ocultas inicialmente
-document.getElementById('opciones').style.display = 'block';
-onlineTarifas.classList.remove('active');
-presencialTarifas.classList.remove('active');
-formulario.classList.remove('active');
-
-// Añadir event listeners a los botones
-onlineBtn.addEventListener('click', function () {
-    console.log('Botón Online clicado');
-    mostrarTarifas('online');
-});
-
-presencialBtn.addEventListener('click', function () {
-    console.log('Botón Presencial clicado');
-    mostrarTarifas('presencial');
-});
-
 // Función para mostrar tarifas y ocultar botones de opciones
 function mostrarTarifas(tipo) {
     console.log('Tipo seleccionado:', tipo);
     tipoTarifaActual = tipo; // Guardar el tipo de tarifa actual
     document.getElementById('opciones').style.display = 'none';
+    
+    // Ocultar todas las secciones de tarifas y formulario
+    onlineTarifas.style.display = 'none';
+    presencialTarifas.style.display = 'none';
+    formulario.style.display = 'none';
 
     if (tipo === 'online') {
-        onlineTarifas.classList.add('active');
-        presencialTarifas.classList.remove('active');
+        onlineTarifas.style.display = 'block';
+        setTimeout(() => {
+            onlineTarifas.classList.add('active');
+        }, 10); // Pequeño retraso para permitir que la transición se aplique
     } else if (tipo === 'presencial') {
-        presencialTarifas.classList.add('active');
-        onlineTarifas.classList.remove('active');
+        presencialTarifas.style.display = 'block';
+        setTimeout(() => {
+            presencialTarifas.classList.add('active');
+        }, 10); // Pequeño retraso para permitir que la transición se aplique
     }
 }
 
-// Añadir event listeners a los botones de reserva
-botonesReserva.forEach((boton, index) => {
-    boton.addEventListener('click', () => {
-        mostrarFormulario(index + 1);
-    });
-});
+// Añadir event listeners a los botones
+onlineBtn.addEventListener('click', () => mostrarTarifas('online'));
+presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
@@ -63,21 +52,31 @@ function mostrarFormulario(tarifa) {
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
-    formulario.classList.add('active');
+    formulario.style.display = 'block';
+    setTimeout(() => {
+        formulario.classList.add('active');
+    }, 10); // Pequeño retraso para permitir que la transición se aplique
 }
 
+// Event listeners para los botones de reserva
+botonesReserva.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+        mostrarFormulario(index + 1);
+    });
+});
+
 // Event listeners para los botones de volver
-backToOptionsFromOnline.addEventListener('click', function () {
+backToOptionsFromOnline.addEventListener('click', () => {
     onlineTarifas.classList.remove('active');
     document.getElementById('opciones').style.display = 'block';
 });
 
-backToOptionsFromPresencial.addEventListener('click', function () {
+backToOptionsFromPresencial.addEventListener('click', () => {
     presencialTarifas.classList.remove('active');
     document.getElementById('opciones').style.display = 'block';
 });
 
-backToTarifas.addEventListener('click', function () {
+backToTarifas.addEventListener('click', () => {
     formulario.classList.remove('active');
     if (tipoTarifaActual === 'online') {
         onlineTarifas.classList.add('active');
@@ -87,7 +86,7 @@ backToTarifas.addEventListener('click', function () {
 });
 
 // Configuración del manejador de eventos del formulario
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const descripcion = document.getElementById('descripcion').value;
