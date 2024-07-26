@@ -45,15 +45,34 @@ h1 {
 }
 
 main {
+  position: relative; /* Contenedor para las secciones apiladas */
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+  height: 400px; /* Ajusta según el tamaño de las secciones */
 }
 
+/* Estilo general para las secciones */
 section {
-  margin-bottom: 40px;
+  position: absolute; /* Posiciona las secciones una sobre otra */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Oculta las secciones por defecto */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Estilo para cuando la sección está activa */
+section.active {
+  opacity: 1; /* Muestra la sección activa */
+  transform: translateY(0); /* Asegura que la sección esté en su lugar */
+}
+
+/* Estilo para los botones */
 button {
   background-color: #007BFF;
   color: white;
@@ -149,24 +168,4 @@ footer p {
 .contacto {
   color: rgb(116, 92, 92);
   font-weight: bold;
-}
-
-/* Transición de visibilidad para las secciones de tarifas */
-#onlineTarifas, #presencialTarifas, #formulario {
-  opacity: 0;
-  transform: translateY(-20px); /* Desplazamiento inicial hacia arriba */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
-}
-
-#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
-  opacity: 1;
-  transform: translateY(0); /* Desplazamiento final a la posición original */
-}
-
-#onlineTarifas, #presencialTarifas, #formulario {
-  display: none; /* Ocultar secciones inicialmente */
-}
-
-#onlineTarifas.active, #presencialTarifas.active, #formulario.active {
-  display: block; /* Mostrar secciones cuando tienen la clase 'active' */
 }
