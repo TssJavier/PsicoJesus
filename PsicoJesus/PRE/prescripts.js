@@ -53,13 +53,13 @@ presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
-    
+
     // Ocultar tarifas antes de mostrar el formulario
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
     onlineTarifas.style.display = 'none';
     presencialTarifas.style.display = 'none';
-    
+
     // Mostrar el formulario
     formulario.style.display = 'block';
     setTimeout(() => {
@@ -119,10 +119,26 @@ form.addEventListener('submit', (event) => {
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. ${tarifa}`);
+    //alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. ${tarifa}`);
 
     // Limpiar el formulario
     form.reset();
     formulario.classList.remove('active');
     document.getElementById('opciones').style.display = 'block'; // Volver a mostrar los botones de opciones
+});
+
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita el envío real del formulario
+
+    // Mensaje personalizado con SweetAlert
+    Swal.fire({
+        title: '¡Enviado!',
+        text: 'Gracias por su mensaje. Nos pondremos en contacto con usted pronto.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+
+    // Opcional: Puedes redirigir o resetear el formulario aquí
+    // location.reload(); // Recargar la página
+    // this.reset(); // Resetear el formulario
 });
