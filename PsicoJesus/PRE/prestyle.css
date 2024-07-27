@@ -118,25 +118,38 @@ footer p {
 /* Estilo para el contenedor de las tarifas */
 .tarifas-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px; /* Espacio entre las cajas de tarifas */
+  flex-wrap: wrap; /* Permite que las cajas se envuelvan si no caben en una línea */
+  gap: 20px; /* Espacio entre las cajas en pantallas grandes */
 }
 
-/* Estilo para cada tarifa */
+/* Estilo para cada caja de tarifa */
 .tarifa {
   border: 3px solid #313323;
   border-radius: 5px;
-  padding: 20px; /* Ajuste del padding para mayor espacio */
+  padding: 20px;
   background-color: #f5f5f5;
-  flex: 1 1 20%; /* Ancho flexible, ajusta el 20% según el espacio disponible */
-  max-width: 230px; /* Ancho máximo para evitar que las cajas sean demasiado anchas */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total */
-  margin: 0 auto; /* Centra las cajas dentro de su contenedor */
+  flex: 1 1 22%; /* Ajustable según el espacio disponible */
+  max-width: 230px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Centra las cajas en su contenedor */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tarifa {
+      flex: 1 1 100%; /* Ocupa el 100% del ancho del contenedor en pantallas pequeñas */
+      max-width: none; /* Elimina el ancho máximo */
+      margin-bottom: 20px; /* Espacio entre las cajas en la columna */
+  }
+
+  /* Elimina el margen inferior en el último elemento */
+  .tarifa:last-child {
+      margin-bottom: 0;
+  }
 }
 
 /* Estilo para el nombre y detalles de la tarifa */
@@ -305,4 +318,77 @@ form .privacy-container {
 form input[type="checkbox"] {
   margin-right: 10px;
   margin-top: 20px;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+  background-color: #f0f8ff; /* Fondo azul claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.60);
+  margin-top: 20px;
+}
+
+#contacto h2 {
+  text-align: center;
+  color: #007BFF; /* Color azul */
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Contenedor de los elementos de contacto */
+.contacto-container {
+  display: flex;
+  justify-content: space-between; /* Distribuir espacio entre elementos */
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+}
+
+/* Estilo para cada item de contacto */
+.contacto-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+  flex: 1 1 30%; /* Ocupa un 30% del ancho del contenedor, ajustable según el espacio */
+  margin: 0 10px; /* Espacio entre los elementos */
+  text-align: center;
+}
+
+/* Iconos */
+.contacto-item i {
+  font-size: 24px;
+  color: #007BFF; /* Color azul */
+  margin-right: 15px;
+}
+
+/* Estilo del texto */
+.contacto-item h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contacto-item p {
+  color: #555;
+}
+
+/* Ajuste de ancho y alineación en pantallas pequeñas */
+@media (max-width: 768px) {
+  .contacto-container {
+      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+      align-items: center;
+  }
+
+  .contacto-item {
+      width: 100%; /* Ocupa el 100% del ancho del contenedor en pantallas más pequeñas */
+      max-width: 500px; /* Limita el ancho máximo para evitar que se estiren demasiado */
+      margin-bottom: 20px; /* Espacio entre los elementos en la columna */
+  }
+
+  .contacto-item:last-child {
+      margin-bottom: 0; /* Elimina el margen inferior en el último elemento */
+  }
 }
