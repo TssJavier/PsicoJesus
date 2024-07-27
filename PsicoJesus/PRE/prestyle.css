@@ -15,11 +15,11 @@ body {
 
 /* Contenedor de caja centrada */
 .contenedor-caja {
-  background-color: #ffffff; /* Fondo blanco para la caja */
+  background-color: #ffffff2d; /* Fondo blanco para la caja */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.9); /* Sombra suave */
   padding: 20px; /* Relleno interno */
-  margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
+  margin: 25px auto; /* Margen superior e inferior, centrado horizontalmente */
   max-width: 800px; /* Ancho máximo de la caja */
   text-align: center; /* Centra el texto dentro de la caja */
 }
@@ -41,11 +41,12 @@ header {
   padding: 20px;
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.6); /* Sombra suave */
+  max-width: 300px;
   flex: 1; /* Ajustable según el espacio disponible */
   box-sizing: border-box;
   margin: 0; /* Elimina márgenes */
   margin-bottom: 10px; /* Espacio inferior */
-  margin-top: 10px; /* Espacio inferior */
+  margin-top: -5px; /* Espacio inferior */
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -177,6 +178,12 @@ footer p {
   text-align: justify; /* Centra el texto dentro de la caja */
 }
 
+/* Estilo para cada caja de tarifa */
+.tarifas {
+  margin-bottom: auto; /* Centra las cajas en su contenedor */
+  padding-bottom: 50px;
+
+}
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -192,9 +199,9 @@ footer p {
 .tarifa-titulo {
   text-align: center; /* Centra el texto dentro del elemento */
   margin: 0 auto; /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   width: fit-content; /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
-  font-size: 26px; /* Ajusta el tamaño del texto aquí */
+  font-size: 30px; /* Ajusta el tamaño del texto aquí */
 }
 
 /* Estilo para el nombre y detalles de la tarifa */
@@ -374,8 +381,8 @@ form input[type="checkbox"] {
   background-color: #f0f8ff; /* Fondo azul claro */
   padding: 40px 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.60);
-  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.60);
+  margin-top: -50px;
 }
 
 #contacto h2 {
@@ -389,7 +396,7 @@ form input[type="checkbox"] {
 .contacto-container {
   display: flex;
   justify-content: space-between; /* Distribuir espacio entre elementos */
-  align-items: center;
+  align-items: justify;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
 }
 
@@ -400,10 +407,10 @@ form input[type="checkbox"] {
   background-color: #ffffff; /* Fondo blanco */
   border-radius: 30px;
   padding: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
   flex: 1 1 30%; /* Ocupa un 30% del ancho del contenedor, ajustable según el espacio */
   margin: 0 10px; /* Espacio entre los elementos */
-  text-align: center;
+  text-align: justify;
 }
 
 /* Iconos */
