@@ -13,14 +13,20 @@ body {
   background-color: #FFFACD; /* Color de fondo amarillo claro */
 }
 
-/* Estilo para contenedor de caja centrada */
+/* Contenedor de caja centrada */
 .contenedor-caja {
   background-color: #ffffff; /* Fondo blanco para la caja */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
   padding: 20px; /* Relleno interno */
-  margin: 20px auto; /* Margen superior e inferior, centrado horizontalmente */
+  margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
   max-width: 800px; /* Ancho máximo de la caja */
+  text-align: center; /* Centra el texto dentro de la caja */
+}
+
+
+.justificado {
+  text-align: justify;
 }
 
 header {
@@ -138,6 +144,7 @@ footer p {
   border-radius: 5px;
   padding: 20px;
   background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.60); /* Sombra suave */
   flex: 1 1 22%; /* Ajustable según el espacio disponible */
   max-width: 230px;
   box-sizing: border-box;
@@ -147,8 +154,9 @@ footer p {
   justify-content: space-between;
   align-items: center; /* Centra el contenido horizontalmente */
   position: relative;
-  text-align: center; /* Centra el texto dentro de la caja */
+  text-align: justify; /* Centra el texto dentro de la caja */
 }
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -158,6 +166,15 @@ footer p {
       margin-bottom: 20px; /* Espacio entre las cajas en la columna */
       align-items: center; /* Centra el contenido horizontalmente en pantallas pequeñas */
   }
+}
+
+/* Estilo para centrar el título de las tarifas */
+.tarifa-titulo {
+  text-align: center; /* Centra el texto dentro del elemento */
+  margin: 0 auto; /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
+  margin-bottom: 20px;
+  width: fit-content; /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
+  font-size: 26px; /* Ajusta el tamaño del texto aquí */
 }
 
 /* Estilo para el nombre y detalles de la tarifa */
