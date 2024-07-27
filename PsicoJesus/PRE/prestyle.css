@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.logo {
+  width: 200px;
+  height: auto; /* Mantiene la proporción original */
+}
+
 /* Fondo amarillo claro */
 body {
   font-family: 'Arial', sans-serif;
