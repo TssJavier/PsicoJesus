@@ -139,6 +139,12 @@ form.addEventListener('submit', (event) => {
     // Limpiar el formulario
     form.reset();
     formulario.classList.remove('active');
-    document.getElementById('opciones').style.display = 'block'; // Volver a mostrar los botones de opciones
-    metodologia.style.display = 'block'; // Mostrar la sección de metodología nuevamente
+    formulario.style.display = 'none';
+
+    // Agregar un retraso antes de mostrar las opciones y metodología
+    setTimeout(() => {
+        // Volver a mostrar los botones de opciones y metodología
+        document.getElementById('opciones').style.display = 'block';
+        metodologia.style.display = 'block';
+    }, 500); // Esperar 1 segundo antes de mostrar las secciones
 });
