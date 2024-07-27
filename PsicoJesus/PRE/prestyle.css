@@ -10,8 +10,23 @@
   height: auto; /* Mantiene la proporción original */
 }
 
+.logo-background {
+  width: 200px;
+  height: 200px;
+  background-image: url('file:///C:/Users/Javit/Desktop/proyecto%20jesus/PsicoJesus/PsicoJesus/imagenes/logo.png');
+  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+  background-position: flex; /* Centra la imagen en el div */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
 /* Fondo amarillo claro */
 body {
+  background-image: url('file:///C:/Users/Javit/Desktop/proyecto%20jesus/PsicoJesus/PsicoJesus/imagenes/logo.png');
+  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+  background-position: center; /* Centra la imagen en el cuerpo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: normal; /* Hace que la imagen se mantenga fija al hacer scroll */
+  background-position-x: -600px;
   font-family: 'Arial', sans-serif;
   color: #000000;
   line-height: 1.6;
