@@ -49,30 +49,63 @@ body {
   text-align: justify;
 }
 
+/* Estilos generales para el header */
 header {
   background-color: #c47777;
   padding: 20px;
   text-align: center;
 }
 
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 600px) {
+  header {
+      padding: 10px;
+      font-size: 18px;
+  }
+
+  header h1 {
+      font-size: 24px; /* Ajusta el tamaño de la fuente para el título */
+  }
+}
+
+/* Estilos generales para las cajas de navegación */
 .nav-class {
   border: 2px solid #313323;
   border-radius: 30px;
-  padding: 20px;
+  padding: 20px 40px; /* Aumenta el padding horizontal para hacer las cajas más anchas */
   background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6); /* Sombra suave */
-  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Ajusta la sombra si es necesario */
+  max-width: 900px; /* Aumenta el ancho máximo para que las cajas sean más anchas */
   flex: 1; /* Ajustable según el espacio disponible */
   box-sizing: border-box;
   margin: 0; /* Elimina márgenes */
   margin-bottom: 10px; /* Espacio inferior */
-  margin-top: -5px; /* Espacio inferior */
+  margin-top: -5px; /* Espacio superior negativo, puedes ajustar según sea necesario */
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center; /* Centra el contenido horizontalmente */
-  text-align: left; /* Centra el texto dentro de la caja */
+  text-align: left; /* Alinea el texto dentro de la caja */
+  overflow-wrap: break-word; /* Asegura que el texto largo se ajuste sin desbordar */
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .nav-class {
+      padding: 15px 20px; /* Reduce el padding para pantallas más pequeñas */
+      max-width: 100%; /* Ajusta el ancho máximo para que la caja no exceda el ancho de la pantalla */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Ajusta la sombra para pantallas pequeñas */
+      font-size: 14px; /* Ajusta el tamaño de fuente para mejor legibilidad en pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-class {
+      max-width: 600px; /* Ajusta el ancho máximo para pantallas medianas */
+  }
+}
+
 
 nav ul {
   background-color: #c47777;
@@ -84,7 +117,8 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 20px;
+
 }
 
 nav ul li a {
@@ -98,9 +132,12 @@ nav ul li a:hover {
 }
 
 h1 {
-  margin-top: 20px;
-  margin-left: -220px;
-  margin-right: 70px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif; /* Fuente moderna de Google Fonts */
+  color: #333; /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto */
+  margin: 20px 0; /* Márgenes ajustados */
+  font-weight: bold; /* Fuente en negrita */
 }
 
 h2 {
