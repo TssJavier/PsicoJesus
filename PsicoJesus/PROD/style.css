@@ -98,7 +98,9 @@ nav ul li a:hover {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: -220px;
+  margin-right: 70px;
 }
 
 h2 {
