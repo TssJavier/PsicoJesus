@@ -251,6 +251,7 @@ footer p {
   background-color: #0056b3;
 }
 
+
 /* Transición de visibilidad para las secciones de tarifas y formulario */
 .tarifas,
 #formulario {
@@ -259,6 +260,7 @@ footer p {
   transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
   display: none; /* Ocultar secciones inicialmente */
 }
+
 
 .tarifas.active,
 #formulario.active {
