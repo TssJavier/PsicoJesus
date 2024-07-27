@@ -127,29 +127,90 @@ footer p {
 .tarifa {
   border: 3px solid #313323;
   border-radius: 5px;
-  padding: 7px;
+  padding: 20px; /* Ajuste del padding para mayor espacio */
   background-color: #f5f5f5;
   flex: 1 1 20%; /* Ancho flexible, ajusta el 20% según el espacio disponible */
   max-width: 230px; /* Ancho máximo para evitar que las cajas sean demasiado anchas */
   box-sizing: border-box; /* Incluye padding y border en el ancho total */
   margin: 0 auto; /* Centra las cajas dentro de su contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* Estilo para el nombre y detalles de la tarifa */
 .tarifa h4 {
   margin-top: 0;
+  margin-bottom: 10px; /* Espacio debajo del título */
+  color: #007BFF;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.tarifa h4 i {
+  margin-right: 10px;
+  color: #007BFF; /* Color del icono */
+}
+
+.tarifa p {
+  margin-bottom: 10px; /* Espacio debajo de los párrafos */
+}
+
+.tarifa .precio {
+  color: #ff5733;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.tarifa .precio span {
+  color: #333;
+  margin-left: 5px;
+}
+
+.tarifa .detalles {
+  color: #555;
+}
+
+.tarifa .contacto {
+  color: rgb(116, 92, 92);
+  font-weight: bold;
+  margin-bottom: 10px; /* Espacio debajo del contacto */
 }
 
 /* Estilo para el mensaje de descuento */
 .descuento {
   color: red;
   font-weight: bold;
+  margin-bottom: 10px; /* Espacio debajo del mensaje de descuento */
 }
 
-/* Estilo para contacto */
-.contacto {
-  color: rgb(116, 92, 92);
-  font-weight: bold;
+/* Estilo para el botón de reserva */
+.tarifa .reserva-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0; /* Eliminar márgenes */
+  position: absolute;
+  bottom: -20px; /* Ajustar según sea necesario para que el botón se alinee sobre la línea negra */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tarifa .reserva-btn.active {
+  background-color: rgb(134, 21, 91); /* Color cuando está clicado */
+}
+
+.tarifa .reserva-btn:hover {
+  background-color: #0056b3;
 }
 
 /* Transición de visibilidad para las secciones de tarifas y formulario */
