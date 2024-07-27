@@ -13,6 +13,16 @@ body {
   background-color: #FFFACD; /* Color de fondo amarillo claro */
 }
 
+/* Estilo para contenedor de caja centrada */
+.contenedor-caja {
+  background-color: #ffffff; /* Fondo blanco para la caja */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Relleno interno */
+  margin: 20px auto; /* Margen superior e inferior, centrado horizontalmente */
+  max-width: 800px; /* Ancho máximo de la caja */
+}
+
 header {
   background-color: #f4f4f4;
   padding: 20px;
