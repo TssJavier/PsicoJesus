@@ -1,3 +1,6 @@
+// Obtener la sección de metodología
+const metodologia = document.getElementById('metodologia');
+
 // Obtener los botones y secciones de tarifas
 const onlineBtn = document.getElementById('onlineBtn');
 const presencialBtn = document.getElementById('presencialBtn');
@@ -27,6 +30,9 @@ function mostrarTarifas(tipo) {
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
     formulario.classList.remove('active');
+    
+    // Ocultar la sección de metodología
+    metodologia.style.display = 'none';
 
     // Asegurarse de que el formulario y tarifas estén ocultos
     formulario.style.display = 'none';
@@ -53,13 +59,13 @@ presencialBtn.addEventListener('click', () => mostrarTarifas('presencial'));
 // Función para mostrar el formulario con la tarifa seleccionada
 function mostrarFormulario(tarifa) {
     tarifaSeleccionada.value = `Tarifa seleccionada: ${tarifa}`;
-    
+
     // Ocultar tarifas antes de mostrar el formulario
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
     onlineTarifas.style.display = 'none';
     presencialTarifas.style.display = 'none';
-    
+
     // Mostrar el formulario
     formulario.style.display = 'block';
     setTimeout(() => {
@@ -79,12 +85,14 @@ backToOptionsFromOnline.addEventListener('click', () => {
     onlineTarifas.classList.remove('active');
     onlineTarifas.style.display = 'none';
     document.getElementById('opciones').style.display = 'block';
+    metodologia.style.display = 'block'; // Mostrar la sección de metodología nuevamente
 });
 
 backToOptionsFromPresencial.addEventListener('click', () => {
     presencialTarifas.classList.remove('active');
     presencialTarifas.style.display = 'none';
     document.getElementById('opciones').style.display = 'block';
+    metodologia.style.display = 'block'; // Mostrar la sección de metodología nuevamente
 });
 
 backToTarifas.addEventListener('click', () => {
@@ -100,6 +108,7 @@ backToTarifas.addEventListener('click', () => {
     }
 });
 
+// Event listener para el formulario
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -119,10 +128,17 @@ form.addEventListener('submit', (event) => {
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
-    alert(`Formulario enviado. Nos pondremos en contacto contigo pronto. ${tarifa}`);
+    // Mensaje personalizado con SweetAlert
+    Swal.fire({
+        title: '¡Enviado!',
+        text: 'Gracias por su mensaje. Nos pondremos en contacto con usted pronto.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
 
     // Limpiar el formulario
     form.reset();
     formulario.classList.remove('active');
     document.getElementById('opciones').style.display = 'block'; // Volver a mostrar los botones de opciones
+    metodologia.style.display = 'block'; // Mostrar la sección de metodología nuevamente
 });
