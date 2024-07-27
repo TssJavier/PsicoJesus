@@ -52,8 +52,10 @@ body {
 /* Estilos generales para el header */
 header {
   background-color: #c47777;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.3); /* Añade sombra al borde del header */
+  border-bottom: 2px solid #a25c5c; /* Opcional: Borde inferior para un efecto adicional */
 }
 
 /* Estilos específicos para pantallas pequeñas */
