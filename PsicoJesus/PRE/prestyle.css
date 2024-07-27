@@ -8,16 +8,16 @@
 /* Fondo amarillo claro */
 body {
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #000000;
   line-height: 1.6;
-  background-color: #FFFACD; /* Color de fondo amarillo claro */
+  background-color: #ffffff; /* Color de fondo amarillo claro */
 }
 
 /* Contenedor de caja centrada */
 .contenedor-caja {
   background-color: #ffffff; /* Fondo blanco para la caja */
   border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.9); /* Sombra suave */
   padding: 20px; /* Relleno interno */
   margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
   max-width: 800px; /* Ancho máximo de la caja */
@@ -30,7 +30,7 @@ body {
 }
 
 header {
-  background-color: #f4f4f4;
+  background-color: #c47777;
   padding: 20px;
   text-align: center;
 }
@@ -39,12 +39,13 @@ header {
   border: 2px solid #313323;
   border-radius: 30px;
   padding: 20px;
-  background-color: #f5f5f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.60); /* Sombra suave */
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6); /* Sombra suave */
   flex: 1; /* Ajustable según el espacio disponible */
   box-sizing: border-box;
   margin: 0; /* Elimina márgenes */
-  margin-bottom: 15px; /* Espacio inferior */
+  margin-bottom: 10px; /* Espacio inferior */
+  margin-top: 10px; /* Espacio inferior */
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -53,6 +54,7 @@ header {
 }
 
 nav ul {
+  background-color: #c47777;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -140,7 +142,7 @@ form button:hover {
 }
 
 footer {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
 }
@@ -162,7 +164,7 @@ footer p {
   border-radius: 5px;
   padding: 20px;
   background-color: #f5f5f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.60); /* Sombra suave */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90); /* Sombra suave */
   flex: 1 1 22%; /* Ajustable según el espacio disponible */
   max-width: 230px;
   box-sizing: border-box;
@@ -302,7 +304,7 @@ form {
   background-color: #ffffff; /* Color de fondo del formulario */
   padding: 20px; /* Relleno interno */
   border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90); /* Sombra */
 }
 
 /* Estilos para las etiquetas del formulario */
