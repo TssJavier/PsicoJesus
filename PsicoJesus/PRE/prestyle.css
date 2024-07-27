@@ -135,7 +135,9 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center; /* Centra el contenido horizontalmente */
   position: relative;
+  text-align: center; /* Centra el texto dentro de la caja */
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -144,11 +146,7 @@ footer p {
       flex: 1 1 100%; /* Ocupa el 100% del ancho del contenedor en pantallas pequeñas */
       max-width: none; /* Elimina el ancho máximo */
       margin-bottom: 20px; /* Espacio entre las cajas en la columna */
-  }
-
-  /* Elimina el margen inferior en el último elemento */
-  .tarifa:last-child {
-      margin-bottom: 0;
+      align-items: center; /* Centra el contenido horizontalmente en pantallas pequeñas */
   }
 }
 
