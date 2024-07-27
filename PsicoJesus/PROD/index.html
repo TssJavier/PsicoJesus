@@ -13,18 +13,19 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#metodologia" class="nav-link">Sobre mí</a></li>
-                <li><a href="#opciones" class="nav-link">Tarifas</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#metodologia" class="nav-link"><i class="fas fa-user"></i> Sobre mí</a></li>
+                <li><a href="#opciones" class="nav-link"><i class="fas fa-tags"></i> Tarifas</a></li>
+                <li><a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </nav>
         <h1>PSICÓLOGO SANITARIO ONLINE/PRESENCIAL</h1>
     </header>
     <main>
-        <section id="metodologia">
-            <h2>Sobre mí</h2>
+        <section id="metodologia" class="contenedor-caja">
+            <h2><i class="fas fa-user"></i> Sobre mí </h2>
             <h3></h3>
-            <p>A nivel personal, comentarte que mis raíces están en Valencia, pero vivo desde hace unos años en Madrid,
+            <p class="justificado">
+                A nivel personal, comentarte que mis raíces están en Valencia, pero vivo desde hace unos años en Madrid,
                 donde realicé el máster de psicología general sanitaria. Me considero una persona muy activa, empática,
                 transparente y risueña. La verdad, que para mí la psicología es algo más que un trabajo, es una vocación
                 y es un sueño poder dedicarse a lo que a uno le apasiona.
@@ -49,13 +50,14 @@
                 problemática me gusta crear con el/la paciente un clima cálido, donde se sienta seguro y en confianza,
                 poder hacer terapia sin ningún tipo de juicio</p>
         </section>
-        <section id="opciones">
-            <button id="onlineBtn">ONLINE</button>
-            <button id="presencialBtn">PRESENCIAL</button>
+        <section id="opciones"class="contenedor-caja">
+            <button id="onlineBtn"><i class="fas fa-laptop"></i> ONLINE</button>
+            <button id="presencialBtn"><i class="fas fa-home"></i> PRESENCIAL</button>
         </section>
         <section id="tarifas">
             <div id="onlineTarifas" class="tarifas">
-                <h3>Tarifas Online</h3>
+                <button id="backToOptionsFromOnline"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h3 class="tarifa-titulo"><i class="fas fa-laptop"></i> Tarifas Online</h3> 
                 <div class="tarifas-container">
                     <div class="tarifa">
                         <h4><i class="fas fa-user"></i> Individual</h4>
@@ -76,7 +78,7 @@
                         <p><i class="fas fa-dollar-sign"></i> Precio: <span>$150</span></p>
                         <p><i class="fas fa-calendar-day"></i> Sesiones: 4</p>
                         <p><i class="fas fa-clock"></i> Duración: 4 horas</p>
-                        <p class="descuento"><i class="fas fa-gift"></i> ¡Llévate una sesión gratis!</p>
+                        <p class="descuento"><i class="fas fa-gift"></i>¡Paga 3 y llévate una sesión gratis!</p>
                         <button class="reserva-btn" data-tarifa="Online Bono Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
@@ -84,14 +86,14 @@
                         <p><i class="fas fa-dollar-sign"></i> Precio: <span>$195</span></p>
                         <p><i class="fas fa-calendar-day"></i> Sesiones: 4</p>
                         <p><i class="fas fa-clock"></i> Duración: 4 horas</p>
-                        <p class="descuento"><i class="fas fa-gift"></i> ¡Llévate una sesión gratis!</p>
+                        <p class="descuento"><i class="fas fa-gift"></i>¡Paga 3 y llévate una sesión gratis!</p>
                         <button class="reserva-btn" data-tarifa="Online Bono Parejas">RESERVA</button>
                     </div>
                 </div>
-                <button id="backToOptionsFromOnline">Volver</button>
             </div>
             <div id="presencialTarifas" class="tarifas">
-                <h3>Tarifas Presenciales</h3>
+                <button id="backToOptionsFromPresencial"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h3 class="tarifa-titulo"> <i class="fas fa-home"></i> Tarifas Presenciales</h3>
                 <div class="tarifas-container">
                     <div class="tarifa">
                         <h4><i class="fas fa-user"></i> Individual</h4>
@@ -112,7 +114,7 @@
                         <p><i class="fas fa-dollar-sign"></i> Precio: <span>$180</span></p>
                         <p><i class="fas fa-calendar-day"></i> Sesiones: 4</p>
                         <p><i class="fas fa-clock"></i> Duración: 4 horas</p>
-                        <p class="descuento"><i class="fas fa-gift"></i> ¡Llévate una sesión gratis!</p>
+                        <p class="descuento"><i class="fas fa-gift"></i>¡Paga 3 y llévate una sesión gratis!</p>
                         <button class="reserva-btn" data-tarifa="Presencial Bono Individual">RESERVA</button>
                     </div>
                     <div class="tarifa">
@@ -120,15 +122,15 @@
                         <p><i class="fas fa-dollar-sign"></i> Precio: <span>$225</span></p>
                         <p><i class="fas fa-calendar-day"></i> Sesiones: 4</p>
                         <p><i class="fas fa-clock"></i> Duración: 4 horas</p>
-                        <p class="descuento"><i class="fas fa-gift"></i> ¡Llévate una sesión gratis!</p>
+                        <p class="descuento"><i class="fas fa-gift"></i>¡Paga 3 y llévate una sesión gratis!</p>
                         <button class="reserva-btn" data-tarifa="Presencial Bono Parejas">RESERVA</button>
                     </div>
                 </div>
-                <button id="backToOptionsFromPresencial">Volver</button>
             </div>
         </section>
         <section id="formulario" style="display: none;">
-            <h2>Formulario de Contacto</h2>
+            <button id="backToTarifas"><i class="fas fa-arrow-left"></i> Volver</button>
+            <h2 class="tarifa-titulo"><i class="fas fa-pencil-alt"></i> Formulario de Contacto</h2>
             <form id="contactForm">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -149,7 +151,6 @@
 
                 <button type="submit">Enviar</button>
             </form>
-            <button id="backToTarifas">Volver</button>
         </section>
     </main>
     <footer>
