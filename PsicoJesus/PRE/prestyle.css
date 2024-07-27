@@ -94,7 +94,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007BFF;
+  color: #5bb4c0;
 }
 
 h1 {
@@ -102,11 +102,13 @@ h1 {
 }
 
 h2 {
+  color: #5bb4c0;
   margin-bottom: 15px;
   font-size: 30px;
 }
 
 h3 {
+  color: #5bb4c0;
   margin-bottom: 15px;
   font-size: 30px;
   container-type: normal;
@@ -159,7 +161,7 @@ form textarea {
 }
 
 form button {
-  background-color: #3f9754;
+  background-color: #77a16c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -170,7 +172,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #2a723b;
+  background-color: #3d5238;
 }
 
 footer {
@@ -247,7 +249,7 @@ footer p {
 .tarifa h4 {
   margin-top: 0;
   margin-bottom: 10px; /* Espacio debajo del título */
-  color: #007BFF;
+  color: #5bb4c0;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -256,7 +258,7 @@ footer p {
 
 .tarifa h4 i {
   margin-right: 10px;
-  color: #007BFF; /* Color del icono */
+  color: #5bb4c0; /* Color del icono */
 }
 
 .tarifa p {
@@ -381,7 +383,7 @@ form textarea {
 
 /* Estilo para el botón de envío del formulario */
 form button {
-  background-color: #3f9754; /* Color de fondo */
+  background-color: #77a16c; /* Color de fondo */
   color: white; /* Color del texto */
   border: none; /* Sin borde */
   padding: 10px 20px; /* Relleno interno */
@@ -394,7 +396,7 @@ form button {
 
 /* Cambiar el color de fondo del botón al pasar el ratón */
 form button:hover {
-  background-color: #2a723b; /* Color de fondo al pasar el ratón */
+  background-color: #3d5238; /* Color de fondo al pasar el ratón */
 }
 
 /* Estilo para la etiqueta de la casilla de verificación */
@@ -426,7 +428,7 @@ form input[type="checkbox"] {
 
 #contacto h2 {
   text-align: center;
-  color: #007BFF; /* Color azul */
+  color: #5bb4c0; /* Color azul */
   margin-bottom: 30px;
   font-size: 35px;
 }
@@ -455,7 +457,7 @@ form input[type="checkbox"] {
 /* Iconos */
 .contacto-item i {
   font-size: 24px;
-  color: #007BFF; /* Color azul */
+  color: #5bb4c0; /* Color azul */
   margin-right: 15px;
 }
 
