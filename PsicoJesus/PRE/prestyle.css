@@ -698,20 +698,66 @@ form input[type="checkbox"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  background: rgba(255, 255, 255, 0.4); /* Fondo semi-transparente */
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
 }
 
-.loading-logo {
-  width: 100px; /* Ajusta el tamaño del logo */
-  height: auto;
-  margin-bottom: 10px;
+/* Estilo para el mini contenedor de contenido de carga */
+.loading-content {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Alinea elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  width: 350px; /* Ancho del contenedor de carga */
+  height: 250px; /* Alto del contenedor de carga */
+  position: relative; /* Para posicionar la línea de carga */
 }
 
+/* Estilo para el logo */
+.loading-logo {
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 10px; /* Espacio debajo del logo */
+  position: relative; /* Para posicionar la línea circular alrededor del logo */
+  z-index: 1; /* Asegúrate de que el logo esté por encima de la línea circular */
+}
+
+/* Estilo para el texto de carga */
 .loading-container p {
-  font-size: 18px;
-  color: #333; /* Ajusta el color del texto */
+  font-size: 20px; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilo para la línea circular de carga */
+.loading-circle {
+  position: absolute; /* Posiciona la línea circular dentro del contenedor */
+  top: 7%;
+  left: 19%;
+  width: 220px; /* Ancho del contenedor circular */
+  height: 220px; /* Alto del contenedor circular */
+  border: 8px solid rgba(0, 0, 0, 0.2); /* Color de la línea de carga */
+  border-top: 8px solid #3498db; /* Color de la línea de carga en movimiento */
+  border-radius: 50%; /* Hace que la línea sea circular */
+  animation: spin 1.5s linear infinite; /* Animación de rotación */
+  transform: translate(-50%, -50%); /* Centra el círculo alrededor del logo */
+  z-index: 0; /* Asegúrate de que el círculo esté por debajo del logo */
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Comienza en la posición inicial */
+  }
+  100% {
+    transform: rotate(360deg); /* Completa una vuelta completa */
+  }
 }
