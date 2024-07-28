@@ -689,3 +689,29 @@ form input[type="checkbox"] {
     /* Elimina el margen inferior en el último elemento */
   }
 }
+
+/* Estilo para el contenedor de carga */
+.loading-container {
+  display: none; /* Oculta el contenedor por defecto */
+  position: fixed; /* Fija el contenedor en la pantalla */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.loading-logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.loading-container p {
+  font-size: 18px;
+  color: #333; /* Ajusta el color del texto */
+}
