@@ -716,7 +716,7 @@ form input[type="checkbox"] {
   flex-direction: column; /* Alinea elementos en columna */
   align-items: center; /* Centra horizontalmente */
   justify-content: center; /* Centra verticalmente */
-  width: 350px; /* Ancho del contenedor de carga */
+  width: 320px; /* Ancho del contenedor de carga */
   height: 250px; /* Alto del contenedor de carga */
   position: relative; /* Para posicionar la línea de carga */
 }
@@ -741,7 +741,7 @@ form input[type="checkbox"] {
 .loading-circle {
   position: absolute; /* Posiciona la línea circular dentro del contenedor */
   top: 7%;
-  left: 19%;
+  left: 14%;
   width: 220px; /* Ancho del contenedor circular */
   height: 220px; /* Alto del contenedor circular */
   border: 8px solid rgba(0, 0, 0, 0.2); /* Color de la línea de carga */
