@@ -7,41 +7,57 @@
 
 .logo {
   width: 200px;
-  height: auto; /* Mantiene la proporción original */
+  height: auto;
+  /* Mantiene la proporción original */
 }
 
 .logo-background {
   width: 200px;
   height: 200px;
   background-image: url('file:///C:/Users/Javit/Desktop/proyecto%20jesus/PsicoJesus/PsicoJesus/imagenes/logo.png');
-  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
-  background-position: flex; /* Centra la imagen en el div */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover;
+  /* Ajusta la imagen para que cubra todo el área */
+  background-position: flex;
+  /* Centra la imagen en el div */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
 }
 
 /* Fondo amarillo claro */
 body {
   background-image: url('file:///C:/Users/Javit/Desktop/proyecto%20jesus/PsicoJesus/PsicoJesus/imagenes/logo.png');
-  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
-  background-position: center; /* Centra la imagen en el cuerpo */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-attachment: normal; /* Hace que la imagen se mantenga fija al hacer scroll */
+  background-size: cover;
+  /* Ajusta la imagen para que cubra todo el área */
+  background-position: center;
+  /* Centra la imagen en el cuerpo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-attachment: normal;
+  /* Hace que la imagen se mantenga fija al hacer scroll */
   background-position-x: -600px;
   font-family: 'Arial', sans-serif;
   color: #000000;
   line-height: 1.6;
-  background-color: #ffffff; /* Color de fondo amarillo claro */
+  background-color: #ffffff;
+  /* Color de fondo amarillo claro */
 }
 
 /* Contenedor de caja centrada */
 .contenedor-caja {
-  background-color: #ffffff2d; /* Fondo blanco para la caja */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.9); /* Sombra suave */
-  padding: 20px; /* Relleno interno */
-  margin: 25px auto; /* Margen superior e inferior, centrado horizontalmente */
-  max-width: 800px; /* Ancho máximo de la caja */
-  text-align: center; /* Centra el texto dentro de la caja */
+  background-color: #ffffff2d;
+  /* Fondo blanco para la caja */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.9);
+  /* Sombra suave */
+  padding: 20px;
+  /* Relleno interno */
+  margin: 25px auto;
+  /* Margen superior e inferior, centrado horizontalmente */
+  max-width: 800px;
+  /* Ancho máximo de la caja */
+  text-align: center;
+  /* Centra el texto dentro de la caja */
 }
 
 
@@ -54,19 +70,22 @@ header {
   background-color: #c47777;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.3); /* Añade sombra al borde del header */
-  border-bottom: 2px solid #a25c5c; /* Opcional: Borde inferior para un efecto adicional */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.3);
+  /* Añade sombra al borde del header */
+  border-bottom: 2px solid #a25c5c;
+  /* Opcional: Borde inferior para un efecto adicional */
 }
 
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 600px) {
   header {
-      padding: 10px;
-      font-size: 18px;
+    padding: 10px;
+    font-size: 18px;
   }
 
   header h1 {
-      font-size: 24px; /* Ajusta el tamaño de la fuente para el título */
+    font-size: 24px;
+    /* Ajusta el tamaño de la fuente para el título */
   }
 }
 
@@ -74,37 +93,52 @@ header {
 .nav-class {
   border: 2px solid #313323;
   border-radius: 30px;
-  padding: 20px 40px; /* Aumenta el padding horizontal para hacer las cajas más anchas */
+  padding: 20px 40px;
+  /* Aumenta el padding horizontal para hacer las cajas más anchas */
   background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Ajusta la sombra si es necesario */
-  max-width: 900px; /* Aumenta el ancho máximo para que las cajas sean más anchas */
-  flex: 1; /* Ajustable según el espacio disponible */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  /* Ajusta la sombra si es necesario */
+  max-width: 900px;
+  /* Aumenta el ancho máximo para que las cajas sean más anchas */
+  flex: 1;
+  /* Ajustable según el espacio disponible */
   box-sizing: border-box;
-  margin: 0; /* Elimina márgenes */
-  margin-bottom: 10px; /* Espacio inferior */
-  margin-top: -5px; /* Espacio superior negativo, puedes ajustar según sea necesario */
+  margin: 0;
+  /* Elimina márgenes */
+  margin-bottom: 10px;
+  /* Espacio inferior */
+  margin-top: -5px;
+  /* Espacio superior negativo, puedes ajustar según sea necesario */
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: center; /* Centra el contenido horizontalmente */
-  text-align: left; /* Alinea el texto dentro de la caja */
-  overflow-wrap: break-word; /* Asegura que el texto largo se ajuste sin desbordar */
+  align-items: center;
+  /* Centra el contenido horizontalmente */
+  text-align: left;
+  /* Alinea el texto dentro de la caja */
+  overflow-wrap: break-word;
+  /* Asegura que el texto largo se ajuste sin desbordar */
 }
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
   .nav-class {
-      padding: 15px 20px; /* Reduce el padding para pantallas más pequeñas */
-      max-width: 100%; /* Ajusta el ancho máximo para que la caja no exceda el ancho de la pantalla */
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Ajusta la sombra para pantallas pequeñas */
-      font-size: 14px; /* Ajusta el tamaño de fuente para mejor legibilidad en pantallas pequeñas */
+    padding: 15px 20px;
+    /* Reduce el padding para pantallas más pequeñas */
+    max-width: 100%;
+    /* Ajusta el ancho máximo para que la caja no exceda el ancho de la pantalla */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    /* Ajusta la sombra para pantallas pequeñas */
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente para mejor legibilidad en pantallas pequeñas */
   }
 }
 
 /* Media query para pantallas medianas */
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-class {
-      max-width: 600px; /* Ajusta el ancho máximo para pantallas medianas */
+    max-width: 600px;
+    /* Ajusta el ancho máximo para pantallas medianas */
   }
 }
 
@@ -135,11 +169,16 @@ nav ul li a:hover {
 
 h1 {
   font-size: 40px;
-  font-family: 'Roboto', sans-serif; /* Fuente moderna de Google Fonts */
-  color: #333; /* Color del texto */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto */
-  margin: 20px 0; /* Márgenes ajustados */
-  font-weight: bold; /* Fuente en negrita */
+  font-family: 'Roboto', sans-serif;
+  /* Fuente moderna de Google Fonts */
+  color: #333;
+  /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Sombra del texto */
+  margin: 20px 0;
+  /* Márgenes ajustados */
+  font-weight: bold;
+  /* Fuente en negrita */
 }
 
 h2 {
@@ -177,7 +216,8 @@ button {
 }
 
 button.active {
-  background-color: rgb(134, 21, 91); /* Color cuando está clicado */
+  background-color: rgb(134, 21, 91);
+  /* Color cuando está clicado */
 }
 
 button:hover {
@@ -229,8 +269,10 @@ footer p {
 /* Estilo para el contenedor de las tarifas */
 .tarifas-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que las cajas se envuelvan si no caben en una línea */
-  gap: 30px; /* Espacio entre las cajas en pantallas grandes */
+  flex-wrap: wrap;
+  /* Permite que las cajas se envuelvan si no caben en una línea */
+  gap: 30px;
+  /* Espacio entre las cajas en pantallas grandes */
 }
 
 /* Estilo para cada caja de tarifa */
@@ -239,22 +281,28 @@ footer p {
   border-radius: 5px;
   padding: 20px;
   background-color: #f5f5f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90); /* Sombra suave */
-  flex: 1 1 22%; /* Ajustable según el espacio disponible */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90);
+  /* Sombra suave */
+  flex: 1 1 22%;
+  /* Ajustable según el espacio disponible */
   max-width: 230px;
   box-sizing: border-box;
-  margin: 0 auto; /* Centra las cajas en su contenedor */
+  margin: 0 auto;
+  /* Centra las cajas en su contenedor */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  /* Centra el contenido horizontalmente */
   position: relative;
-  text-align: justify; /* Centra el texto dentro de la caja */
+  text-align: justify;
+  /* Centra el texto dentro de la caja */
 }
 
 /* Estilo para cada caja de tarifa */
 .tarifas {
-  margin-bottom: auto; /* Centra las cajas en su contenedor */
+  margin-bottom: auto;
+  /* Centra las cajas en su contenedor */
   padding-bottom: 50px;
 
 }
@@ -262,10 +310,14 @@ footer p {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .tarifa {
-      flex: 1 1 100%; /* Ocupa el 100% del ancho del contenedor en pantallas pequeñas */
-      max-width: none; /* Elimina el ancho máximo */
-      margin-bottom: 20px; /* Espacio entre las cajas en la columna */
-      align-items: center; /* Centra el contenido horizontalmente en pantallas pequeñas */
+    flex: 1 1 100%;
+    /* Ocupa el 100% del ancho del contenedor en pantallas pequeñas */
+    max-width: none;
+    /* Elimina el ancho máximo */
+    margin-bottom: 20px;
+    /* Espacio entre las cajas en la columna */
+    align-items: center;
+    /* Centra el contenido horizontalmente en pantallas pequeñas */
   }
 }
 
@@ -275,21 +327,28 @@ footer p {
   border-radius: 30px;
   padding: 20px;
   background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6); /* Sombra suave */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6);
+  /* Sombra suave */
   max-width: 800px;
-  flex: 1; /* Ajustable según el espacio disponible */
+  flex: 1;
+  /* Ajustable según el espacio disponible */
   box-sizing: border-box;
-  text-align: center; /* Centra el texto dentro del elemento */
-  margin: 0 auto; /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
+  text-align: center;
+  /* Centra el texto dentro del elemento */
+  margin: 0 auto;
+  /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
   margin-bottom: 50px;
-  width: fit-content; /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
-  font-size: 30px; /* Ajusta el tamaño del texto aquí */
+  width: fit-content;
+  /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
+  font-size: 30px;
+  /* Ajusta el tamaño del texto aquí */
 }
 
 /* Estilo para el nombre y detalles de la tarifa */
 .tarifa h4 {
   margin-top: 0;
-  margin-bottom: 10px; /* Espacio debajo del título */
+  margin-bottom: 10px;
+  /* Espacio debajo del título */
   color: #5bb4c0;
   font-size: 20px;
   font-weight: bold;
@@ -299,11 +358,13 @@ footer p {
 
 .tarifa h4 i {
   margin-right: 10px;
-  color: #5bb4c0; /* Color del icono */
+  color: #5bb4c0;
+  /* Color del icono */
 }
 
 .tarifa p {
-  margin-bottom: 10px; /* Espacio debajo de los párrafos */
+  margin-bottom: 10px;
+  /* Espacio debajo de los párrafos */
 }
 
 .tarifa .precio {
@@ -326,14 +387,16 @@ footer p {
 .tarifa .contacto {
   color: rgb(116, 92, 92);
   font-weight: bold;
-  margin-bottom: 10px; /* Espacio debajo del contacto */
+  margin-bottom: 10px;
+  /* Espacio debajo del contacto */
 }
 
 /* Estilo para el mensaje de descuento */
 .descuento {
   color: red;
   font-weight: bold;
-  margin-bottom: 10px; /* Espacio debajo del mensaje de descuento */
+  margin-bottom: 10px;
+  /* Espacio debajo del mensaje de descuento */
 }
 
 /* Estilo para el botón de reserva */
@@ -345,15 +408,18 @@ footer p {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 0; /* Eliminar márgenes */
+  margin: 0;
+  /* Eliminar márgenes */
   position: absolute;
-  bottom: -20px; /* Ajustar según sea necesario para que el botón se alinee sobre la línea negra */
+  bottom: -20px;
+  /* Ajustar según sea necesario para que el botón se alinee sobre la línea negra */
   left: 50%;
   transform: translateX(-50%);
 }
 
 .tarifa .reserva-btn.active {
-  background-color: rgb(134, 21, 91); /* Color cuando está clicado */
+  background-color: rgb(134, 21, 91);
+  /* Color cuando está clicado */
 }
 
 .tarifa .reserva-btn:hover {
@@ -365,79 +431,114 @@ footer p {
 .tarifas,
 #formulario {
   opacity: 0;
-  transform: translateY(-20px); /* Desplazamiento inicial hacia arriba */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
-  display: none; /* Ocultar secciones inicialmente */
+  transform: translateY(-20px);
+  /* Desplazamiento inicial hacia arriba */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Transición suave */
+  display: none;
+  /* Ocultar secciones inicialmente */
 }
 
 
 .tarifas.active,
 #formulario.active {
   opacity: 1;
-  transform: translateY(0); /* Desplazamiento final a la posición original */
-  display: block; /* Mostrar secciones cuando tienen la clase 'active' */
+  transform: translateY(0);
+  /* Desplazamiento final a la posición original */
+  display: block;
+  /* Mostrar secciones cuando tienen la clase 'active' */
 }
 
 /* Asegura que el formulario se alinee correctamente después de las tarifas */
 #formulario {
-  margin-top: 20px; /* Ajusta según el diseño */
+  margin-top: 20px;
+  /* Ajusta según el diseño */
 }
 
 /* Estilos para centrar y cambiar el tamaño de las cajas del formulario */
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos del formulario horizontalmente */
-  max-width: 600px; /* Ancho máximo del formulario */
-  margin: 0 auto; /* Centra el formulario en la página */
-  background-color: #ffffff; /* Color de fondo del formulario */
-  padding: 20px; /* Relleno interno */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90); /* Sombra */
+  align-items: center;
+  /* Centra los elementos del formulario horizontalmente */
+  max-width: 600px;
+  /* Ancho máximo del formulario */
+  margin: 0 auto;
+  /* Centra el formulario en la página */
+  background-color: #ffffff;
+  /* Color de fondo del formulario */
+  padding: 20px;
+  /* Relleno interno */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.90);
+  /* Sombra */
 }
 
 /* Estilos para las etiquetas del formulario */
 form label {
   width: 100%;
-  margin: 10px 0 5px; /* Margen superior, entre etiquetas y entradas */
-  color: #333; /* Color del texto de las etiquetas */
-  font-weight: bold; /* Negrita en las etiquetas */
+  margin: 10px 0 5px;
+  /* Margen superior, entre etiquetas y entradas */
+  color: #333;
+  /* Color del texto de las etiquetas */
+  font-weight: bold;
+  /* Negrita en las etiquetas */
 }
 
 /* Estilos para los campos de entrada del formulario */
 form input,
 form textarea {
-  width: 100%; /* Ancho del 100% del contenedor */
-  padding: 10px; /* Relleno interno */
-  margin-bottom: 20px; /* Margen inferior */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  width: 100%;
+  /* Ancho del 100% del contenedor */
+  padding: 10px;
+  /* Relleno interno */
+  margin-bottom: 20px;
+  /* Margen inferior */
+  border: 1px solid #ccc;
+  /* Borde */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  font-size: 16px;
+  /* Tamaño de fuente */
+  color: #333;
+  /* Color del texto */
 }
 
 /* Estilo para el área de texto del formulario */
 form textarea {
-  height: 100px; /* Altura del área de texto */
-  resize: none; /* Deshabilitar el redimensionado */
+  height: 100px;
+  /* Altura del área de texto */
+  resize: none;
+  /* Deshabilitar el redimensionado */
 }
 
 /* Estilo para el botón de envío del formulario */
 form button {
-  background-color: #77a16c; /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Relleno interno */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cursor en forma de mano */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s ease; /* Transición suave */
-  margin-top: 10px; /* Margen superior */
+  background-color: #77a16c;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  border: none;
+  /* Sin borde */
+  padding: 10px 20px;
+  /* Relleno interno */
+  font-size: 16px;
+  /* Tamaño de fuente */
+  cursor: pointer;
+  /* Cursor en forma de mano */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+  /* Transición suave */
+  margin-top: 10px;
+  /* Margen superior */
 }
 
 /* Cambiar el color de fondo del botón al pasar el ratón */
 form button:hover {
-  background-color: #3d5238; /* Color de fondo al pasar el ratón */
+  background-color: #3d5238;
+  /* Color de fondo al pasar el ratón */
 }
 
 /* Estilo para la etiqueta de la casilla de verificación */
@@ -460,7 +561,8 @@ form input[type="checkbox"] {
 
 /* Estilos para la sección de contacto */
 #contacto {
-  background-color: #f0f8ff; /* Fondo azul claro */
+  background-color: #f0f8ff;
+  /* Fondo azul claro */
   padding: 40px 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.60);
@@ -469,7 +571,8 @@ form input[type="checkbox"] {
 
 #contacto h2 {
   text-align: center;
-  color: #5bb4c0; /* Color azul */
+  color: #5bb4c0;
+  /* Color azul */
   margin-bottom: 30px;
   font-size: 35px;
 }
@@ -477,28 +580,34 @@ form input[type="checkbox"] {
 /* Contenedor de los elementos de contacto */
 .contacto-container {
   display: flex;
-  justify-content: space-between; /* Distribuir espacio entre elementos */
+  justify-content: space-between;
+  /* Distribuir espacio entre elementos */
   align-items: justify;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+  flex-wrap: wrap;
+  /* Permite que los elementos se envuelvan si no caben en una línea */
 }
 
 /* Estilo para cada item de contacto */
 .contacto-item {
   display: flex;
   align-items: center;
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff;
+  /* Fondo blanco */
   border-radius: 30px;
   padding: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
-  flex: 1 1 30%; /* Ocupa un 30% del ancho del contenedor, ajustable según el espacio */
-  margin: 0 10px; /* Espacio entre los elementos */
+  flex: 1 1 30%;
+  /* Ocupa un 30% del ancho del contenedor, ajustable según el espacio */
+  margin: 0 10px;
+  /* Espacio entre los elementos */
   text-align: justify;
 }
 
 /* Iconos */
 .contacto-item i {
   font-size: 24px;
-  color: #5bb4c0; /* Color azul */
+  color: #5bb4c0;
+  /* Color azul */
   margin-right: 15px;
 }
 
@@ -516,17 +625,22 @@ form input[type="checkbox"] {
 /* Ajuste de ancho y alineación en pantallas pequeñas */
 @media (max-width: 768px) {
   .contacto-container {
-      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
-      align-items: center;
+    flex-direction: column;
+    /* Cambia a columna en pantallas más pequeñas */
+    align-items: center;
   }
 
   .contacto-item {
-      width: 100%; /* Ocupa el 100% del ancho del contenedor en pantallas más pequeñas */
-      max-width: 500px; /* Limita el ancho máximo para evitar que se estiren demasiado */
-      margin-bottom: 20px; /* Espacio entre los elementos en la columna */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor en pantallas más pequeñas */
+    max-width: 500px;
+    /* Limita el ancho máximo para evitar que se estiren demasiado */
+    margin-bottom: 20px;
+    /* Espacio entre los elementos en la columna */
   }
 
   .contacto-item:last-child {
-      margin-bottom: 0; /* Elimina el margen inferior en el último elemento */
+    margin-bottom: 0;
+    /* Elimina el margen inferior en el último elemento */
   }
 }
