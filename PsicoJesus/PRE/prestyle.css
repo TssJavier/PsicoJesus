@@ -741,7 +741,7 @@ form input[type="checkbox"] {
 .loading-circle {
   position: absolute; /* Posiciona la línea circular dentro del contenedor */
   top: 7%;
-  left: 16%;
+  left: 14%;
   width: 220px; /* Ancho del contenedor circular */
   height: 220px; /* Alto del contenedor circular */
   border: 8px solid rgba(0, 0, 0, 0.2); /* Color de la línea de carga */
