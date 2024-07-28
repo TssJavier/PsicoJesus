@@ -30,7 +30,7 @@ function mostrarTarifas(tipo) {
     onlineTarifas.classList.remove('active');
     presencialTarifas.classList.remove('active');
     formulario.classList.remove('active');
-    
+
     // Ocultar la sección de metodología
     metodologia.style.display = 'none';
 
@@ -128,6 +128,25 @@ form.addEventListener('submit', (event) => {
     // Esto generalmente se haría mediante una llamada a un backend
     // Por ejemplo, usando un servicio como EmailJS
 
+    // Datos para enviar el correo
+    const templateParams = {
+        from_email: email,
+        to_email: 'jschezpsicologo@gmail.com',
+        subject: 'Nueva reserva de tarifa',
+        message_html: `
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Descripción:</strong> ${descripcion}</p>
+        <p><strong>Fecha:</strong> ${fecha}</p>
+        <p><strong>Tarifa:</strong> ${tarifa}</p>
+    `
+    };
+
+    // Enviar el correo usando EmailJS
+    emailjs.send('service_fwwgiqv', 'template_wz3vzks', templateParams)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        });
+
     // Mensaje personalizado con SweetAlert
     Swal.fire({
         title: '¡Enviado!',
@@ -146,5 +165,16 @@ form.addEventListener('submit', (event) => {
         // Volver a mostrar los botones de opciones y metodología
         document.getElementById('opciones').style.display = 'block';
         metodologia.style.display = 'block';
-    }, 500); // Esperar 1 segundo antes de mostrar las secciones
+    }, 500); // Esperar 0.5 segundos antes de mostrar las secciones
+}, (error) => {
+    console.log('FAILED...', error);
+
+    // Mostrar un mensaje de error
+    Swal.fire({
+        title: 'Error',
+        text: 'Hubo un problema al enviar su mensaje. Por favor, inténtelo nuevamente más tarde.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+    });
 });
+
