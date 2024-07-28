@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const fecha = document.getElementById('fecha').value;
         const tarifa = tarifaSeleccionada.value;
         const privacy = document.getElementById('privacy');
+        const telefono = document.getElementById('teefono').value
 
         // Verificar si la casilla de privacidad está marcada
         if (!privacy.checked) {
@@ -132,14 +133,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Datos para enviar el correo
         const templateParams = {
             from_email: email,
-            to_email: 'jschezpsicologo@gmail.com',
-            subject: 'Nueva reserva de tarifa',
-            message_html: `
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Descripción:</strong> ${descripcion}</p>
-            <p><strong>Fecha:</strong> ${fecha}</p>
-            <p><strong>Tarifa:</strong> ${tarifa}</p>
-        `
+            from_telefono: telefono,
+            from_descripcion: descripcion,
+            from_fecha: fecha,
+            from_tarifa: tarifa
         };
 
         // Enviar el correo usando EmailJS
