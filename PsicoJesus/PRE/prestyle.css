@@ -46,7 +46,7 @@ body {
 
 /* Estilo para el contenedor de la caja */
 .contenedor-caja {
-  background-color: #ffffff2d; /* Fondo blanco para la caja */
+  background-color: #f0f8ffec; /* Fondo blanco para la caja */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.9); /* Sombra suave */
   padding: 20px; /* Relleno interno */
@@ -606,7 +606,7 @@ form input[type="checkbox"] {
 
 /* Estilos para la sección de contacto */
 #contacto {
-  background-color: #f0f8ff;
+  background-color: #f0f8ffec;
   /* Fondo azul claro */
   padding: 40px 20px;
   border-radius: 10px;
