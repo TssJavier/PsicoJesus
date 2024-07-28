@@ -23,6 +23,7 @@
   /* Evita que la imagen se repita */
 }
 
+
 /* Fondo amarillo claro */
 body {
   background-image: url('file:///C:/Users/Javit/Desktop/proyecto%20jesus/PsicoJesus/PsicoJesus/imagenes/logo.png');
@@ -42,28 +43,72 @@ body {
   /* Color de fondo amarillo claro */
 }
 
-/* Contenedor de caja centrada */
+
+/* Estilo para el contenedor de la caja */
 .contenedor-caja {
-  background-color: #ffffff2d;
-  /* Fondo blanco para la caja */
-  border-radius: 10px;
-  /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.9);
-  /* Sombra suave */
-  padding: 20px;
-  /* Relleno interno */
-  margin: 25px auto;
-  /* Margen superior e inferior, centrado horizontalmente */
-  max-width: 800px;
-  /* Ancho máximo de la caja */
-  text-align: center;
-  /* Centra el texto dentro de la caja */
+  background-color: #f0f8ffec; /* Fondo blanco para la caja */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.9); /* Sombra suave */
+  padding: 20px; /* Relleno interno */
+  margin: 25px auto; /* Margen superior e inferior, centrado horizontalmente */
+  max-width: 800px; /* Ancho máximo de la caja */
+  text-align: center; /* Centra el texto del título dentro de la caja */
 }
 
+/* Contenedor que envuelve el texto y la imagen */
+.content-wrapper {
+  display: flex; /* Usa flexbox para alinear el texto y la imagen */
+  justify-content: space-between; /* Alinea el contenido al espacio disponible */
+  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  margin-top: 20px; /* Espacio entre el título y el contenido */
+}
 
+/* Estilo para el texto */
+.text-content {
+  flex: 1; /* Permite que el texto ocupe todo el espacio disponible */
+  margin-right: 20px; /* Espacio entre el texto y la imagen */
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Estilo para el contenedor de la imagen */
+.image-container {
+  max-width: 250px; /* Ajusta el tamaño máximo del contenedor de la imagen */
+  max-height: 50%; /* Ajusta el tamaño máximo del contenedor de la imagen */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobrepase el contenedor */
+  border: 2px solid #ccc; /* Borde del contenedor de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5); /* Sombra del contenedor de la imagen */
+}
+
+.image-container img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Elimina el espacio extra debajo de la imagen */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+
+/* Estilo para el texto justificado */
 .justificado {
-  text-align: justify;
+  text-align: justify; /* Justifica el texto */
 }
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .text-content {
+    margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    margin-bottom: 20px; /* Añade espacio entre el texto y la imagen */
+  }
+
+  .image-container {
+    max-width: 100%; /* Ajusta el ancho máximo del contenedor de la imagen para pantallas pequeñas */
+    margin-top: 20px; /* Añade espacio arriba de la imagen en pantallas pequeñas */
+  }
+}
+
 
 /* Estilos generales para el header */
 header {
@@ -561,7 +606,7 @@ form input[type="checkbox"] {
 
 /* Estilos para la sección de contacto */
 #contacto {
-  background-color: #f0f8ff;
+  background-color: #f0f8ffec;
   /* Fondo azul claro */
   padding: 40px 20px;
   border-radius: 10px;
