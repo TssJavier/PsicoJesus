@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const fecha = document.getElementById('fecha').value;
         const tarifa = tarifaSeleccionada.value;
         const privacy = document.getElementById('privacy');
-        const telefono = document.getElementById('teefono').value
+        const telefono = document.getElementById('telefono').value
 
         // Verificar si la casilla de privacidad está marcada
         if (!privacy.checked) {
