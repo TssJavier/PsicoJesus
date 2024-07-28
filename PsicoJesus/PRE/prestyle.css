@@ -89,6 +89,7 @@ body {
 /* Estilo para el texto justificado */
 .justificado {
   text-align: justify; /* Justifica el texto */
+  margin-bottom: 20px; /* Ajusta el valor según sea necesario */
 }
 
 /* Consultas de medios para pantallas pequeñas */
