@@ -259,6 +259,7 @@ button {
   cursor: pointer;
   border-radius: 5px;
   margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Añadir sombreado */
 }
 
 button.active {
@@ -373,22 +374,18 @@ footer p {
   border-radius: 30px;
   padding: 20px;
   background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6);
-  /* Sombra suave */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.6); /* Sombra suave */
   max-width: 800px;
-  flex: 1;
-  /* Ajustable según el espacio disponible */
+  flex: 1; /* Ajustable según el espacio disponible */
   box-sizing: border-box;
-  text-align: center;
-  /* Centra el texto dentro del elemento */
-  margin: 0 auto;
-  /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
+  text-align: center; /* Centra el texto dentro del elemento */
+  margin: 0 auto; /* Asegura que el margen horizontal sea automático para centrar el elemento en el contenedor */
   margin-bottom: 50px;
-  width: fit-content;
-  /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
-  font-size: 30px;
-  /* Ajusta el tamaño del texto aquí */
+  width: fit-content; /* Ajusta el ancho del elemento al contenido para centrarlo correctamente */
+  font-size: 30px; /* Ajusta el tamaño del texto aquí */
 }
+
+
 
 /* Estilo para el nombre y detalles de la tarifa */
 .tarifa h4 {
@@ -461,6 +458,7 @@ footer p {
   /* Ajustar según sea necesario para que el botón se alinee sobre la línea negra */
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Añadir sombreado */
 }
 
 .tarifa .reserva-btn.active {
@@ -470,6 +468,7 @@ footer p {
 
 .tarifa .reserva-btn:hover {
   background-color: #5b62c0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9); /* Aumentar el sombreado en hover */
 }
 
 
@@ -628,9 +627,12 @@ form input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
   /* Distribuir espacio entre elementos */
-  align-items: justify;
+  align-items: flex-start; /* Ajusta los elementos al inicio del contenedor */
   flex-wrap: wrap;
   /* Permite que los elementos se envuelvan si no caben en una línea */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+  padding: 0 20px; /* Espacio horizontal alrededor del contenedor */
 }
 
 /* Estilo para cada item de contacto */
@@ -642,12 +644,13 @@ form input[type="checkbox"] {
   border-radius: 30px;
   padding: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
-  flex: 1 1 30%;
+  flex: 1 1 100%;
   /* Ocupa un 30% del ancho del contenedor, ajustable según el espacio */
   margin: 0 10px;
   /* Espacio entre los elementos */
   text-align: justify;
 }
+
 
 /* Iconos */
 .contacto-item i {
@@ -760,5 +763,73 @@ form input[type="checkbox"] {
   }
   100% {
     transform: rotate(360deg); /* Completa una vuelta completa */
+  }
+}
+
+
+footer {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.contacto-item {
+  flex: 1 1 calc(33.333% - 20px); /* Cada item ocupa un tercio del contenedor menos el espacio entre ellos */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+  margin-bottom: 20px; /* Espacio debajo de cada item */
+}
+
+.contacto-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contacto-item p {
+  margin: 5px 0;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+/* Estilo para el contenedor de iconos sociales */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra los iconos horizontalmente en el contenedor */
+  gap: 20px; /* Espacio entre los iconos */
+  flex-wrap: wrap; /* Permite que los iconos se envuelvan si no caben en una sola fila */
+}
+
+/* Estilo para cada enlace de icono */
+.social-icons a {
+  display: inline-block; /* Ajusta el tamaño al contenido del enlace */
+}
+
+/* Estilo específico para la imagen del QR */
+.qr-image {
+  width: 235px; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajusta el tamaño de los iconos */
+.social-icon {
+  width: 70px; /* Tamaño estándar para iconos */
+  height: auto; /* Mantiene la proporción del icono */
+  gap: 20px;
+}
+
+
+/* Estilos opcionales para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contacto-item {
+      flex: 1 1 100%; /* En pantallas pequeñas, cada item ocupa el 100% del contenedor */
   }
 }
