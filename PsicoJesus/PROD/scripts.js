@@ -214,3 +214,77 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Obtener referencias a los enlaces
+    const politicaLink = document.getElementById('politicaLink');
+    const avisoLink = document.getElementById('avisoLink');
+
+    // Contenido de ejemplo para la política de privacidad y el aviso legal
+    const politicaContenido = `
+        <div style="max-height: 400px; overflow-y: auto; text-align: left;">
+            <p>Aquí van las bases legales de la política de privacidad. Incluye toda la información relevante sobre cómo se gestionan los datos personales.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+            <!-- Añade más contenido según sea necesario -->
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+        </div>
+    `;
+
+    const avisoContenido = `
+        <div style="max-height: 400px; overflow-y: auto; text-align: left;">
+            <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+                        <p>Aquí va el contenido del aviso legal. Incluye toda la información relevante sobre los términos y condiciones de uso del sitio web.</p>
+            <p>Texto adicional para demostrar el desplazamiento...</p>
+            <p>Más texto para continuar demostrando el desplazamiento...</p>
+            <!-- Añade más contenido según sea necesario -->
+        </div>
+    `;
+
+    // Manejar clic en el enlace de política de privacidad
+    politicaLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+        Swal.fire({
+            title: 'Política de Privacidad',
+            html: politicaContenido, // Usar `html` en lugar de `text`
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+        });
+    });
+
+    // Manejar clic en el enlace de aviso legal
+    avisoLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+        Swal.fire({
+            title: 'Aviso Legal',
+            html: avisoContenido, // Usar `html` en lugar de `text`
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+        });
+    });
+});
