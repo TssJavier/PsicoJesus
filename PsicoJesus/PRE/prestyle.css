@@ -240,6 +240,15 @@ h3 {
   container-type: normal;
 }
 
+h5 {
+  color: #c05b5b;
+  margin-bottom: 15px;
+  font-size: 23px;
+  container-type: normal;
+  text-align: center;
+}
+
+
 main {
   padding: 20px;
   max-width: 1200px;
